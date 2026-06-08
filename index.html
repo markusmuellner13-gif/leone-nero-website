@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Leone Nero S.r.l. — Premium software house. We build desktop software, mobile apps, and games that define the digital frontier."/>
+  <meta name="keywords" content="Leone Nero, software company, mobile apps, games, desktop software, Italy"/>
+  <meta name="author" content="Leone Nero S.r.l."/>
+  <meta property="og:title"       content="Leone Nero S.r.l. — Software · Apps · Games"/>
+  <meta property="og:description" content="We build software that roars. Desktop, mobile, and game releases."/>
+  <meta property="og:type"        content="website"/>
+
+  <title>Leone Nero S.r.l. — Software · Apps · Games</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Favicon inline SVG data URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230a0a0a'/%3E%3Cellipse cx='16' cy='18' rx='9' ry='10' fill='%23221505'/%3E%3Ccircle cx='16' cy='14' r='12' fill='%23161005'/%3E%3Cellipse cx='11' cy='13' rx='3.5' ry='2.8' fill='%23c9a84c'/%3E%3Cellipse cx='21' cy='13' rx='3.5' ry='2.8' fill='%23c9a84c'/%3E%3Cellipse cx='11' cy='13' rx='1.8' ry='2.5' fill='%230a0500'/%3E%3Cellipse cx='21' cy='13' rx='1.8' ry='2.5' fill='%230a0500'/%3E%3C/svg%3E"/>
+</head>
+<body>
+
+<!-- ================================================================
+     LOADER
+================================================================ -->
+<div id="loader" role="status" aria-label="Loading Leone Nero">
+  <canvas id="loader-canvas"></canvas>
+</div>
+
+<!-- ================================================================
+     SITE WRAPPER
+================================================================ -->
+<div id="site-wrap">
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+
+    <a href="index.html" class="nav-logo" aria-label="Leone Nero home">
+      <!-- Lion icon SVG -->
+      <svg class="nav-logo-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Mane spikes -->
+        <g fill="#c9a84c" opacity="0.85">
+          <polygon points="40,4  36,20 40,17 44,20"/>
+          <polygon points="58,8  50,22 53,19 56,22"/>
+          <polygon points="71,21 58,30 60,27 63,30"/>
+          <polygon points="76,38 61,40 63,43 60,46"/>
+          <polygon points="71,56 59,50 60,54 57,57"/>
+          <polygon points="57,68 50,55 53,58 50,61"/>
+          <polygon points="40,72 36,56 40,59 44,56"/>
+          <polygon points="23,68 30,55 27,58 30,61"/>
+          <polygon points="9,56  21,50 20,54 17,57"/>
+          <polygon points="4,38  19,40 17,43 20,46"/>
+          <polygon points="9,21  22,30 20,27 17,30"/>
+          <polygon points="22,8  30,22 27,19 24,22"/>
+        </g>
+        <!-- Mane circle -->
+        <circle cx="40" cy="40" r="26" fill="#1a1005"/>
+        <!-- Face -->
+        <ellipse cx="40" cy="42" rx="20" ry="22" fill="#231506"/>
+        <!-- Eyes -->
+        <ellipse cx="33" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
+        <ellipse cx="47" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
+        <ellipse cx="33" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
+        <ellipse cx="47" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
+        <circle  cx="32" cy="36" r="1"   fill="rgba(255,255,255,0.5)"/>
+        <circle  cx="46" cy="36" r="1"   fill="rgba(255,255,255,0.5)"/>
+        <!-- Nose -->
+        <path d="M37,47 C38,44 42,44 43,47 C44,50 42,52 40,52 C38,52 36,50 37,47Z" fill="#1e0800"/>
+        <!-- Roaring mouth -->
+        <path d="M32,54 C35,60 45,60 48,54 L46,52 C43,57 37,57 34,52 Z" fill="#0a0000"/>
+        <path d="M35,53 L36,58 L38,53" fill="rgba(235,230,215,0.9)"/>
+        <path d="M42,53 L43,58 L45,53" fill="rgba(235,230,215,0.9)"/>
+        <!-- Mane ring accent -->
+        <circle cx="40" cy="40" r="26" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.3"/>
+      </svg>
+
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">LEONE NERO</span>
+        <span class="nav-logo-srl">S.r.l.</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="btn-nav-cta">Contact Us</a></li>
+    </ul>
+
+    <button id="nav-burger" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile nav -->
+  <nav id="mobile-nav" aria-label="Mobile navigation">
+    <a href="#hero">Home</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ================================================================
+       HERO
+  ================================================================ -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-glow-bg"  aria-hidden="true"></div>
+
+    <div class="hero-badge">
+      <span class="hero-badge-dot" aria-hidden="true"></span>
+      Crafting the Future of Software
+    </div>
+
+    <h1 class="hero-title">
+      We Build Software<br/>
+      <span class="gold-text">That Roars.</span>
+    </h1>
+
+    <p class="hero-sub">
+      Leone Nero S.r.l. delivers precision-engineered desktop software, mobile
+      applications, and immersive mobile games — products that leave a mark.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary">
+        View Our Work
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       STATS STRIP
+  ================================================================ -->
+  <section id="stats" class="section" aria-label="Company statistics">
+    <div class="stats-row">
+      <div class="stat-item reveal delay-1">
+        <span class="stat-num" data-target="6">0</span>
+        <span class="stat-lbl">Products Released</span>
+      </div>
+      <div class="stat-item reveal delay-2">
+        <span class="stat-num" data-target="200000">0</span>
+        <span class="stat-lbl">Active Users</span>
+      </div>
+      <div class="stat-item reveal delay-3">
+        <span class="stat-num" data-target="4.8">0</span>
+        <span class="stat-lbl">Average App Rating</span>
+      </div>
+      <div class="stat-item reveal delay-4">
+        <span class="stat-num" data-target="3">0</span>
+        <span class="stat-lbl">Years of Excellence</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SERVICES
+  ================================================================ -->
+  <section id="services" class="section" aria-labelledby="services-title">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="s-label">What We Do</p>
+        <h2 id="services-title" class="s-title">Built With Purpose.<br/>Shipped With Pride.</h2>
+        <p class="s-desc">From enterprise desktop suites to hit mobile games — we cover the full spectrum of modern software.</p>
+        <div class="s-rule"></div>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal delay-1">
+          <div class="service-ico" aria-hidden="true">🖥️</div>
+          <h3 class="service-title">Desktop Software</h3>
+          <p class="service-desc">High-performance native applications for Windows and macOS. We engineer productivity tools, security suites, and professional utilities built to enterprise standards.</p>
+        </div>
+
+        <div class="service-card reveal delay-2">
+          <div class="service-ico" aria-hidden="true">📱</div>
+          <h3 class="service-title">Mobile Applications</h3>
+          <p class="service-desc">Beautiful, fast iOS and Android apps from scratch. We handle design, engineering, and App Store / Google Play submission — end to end.</p>
+        </div>
+
+        <div class="service-card reveal delay-3">
+          <div class="service-ico" aria-hidden="true">🎮</div>
+          <h3 class="service-title">Mobile Games</h3>
+          <p class="service-desc">Immersive mobile gaming experiences with polished visuals, tight mechanics, and live-ops support. We build games people actually play.</p>
+        </div>
+
+        <div class="service-card reveal delay-4">
+          <div class="service-ico" aria-hidden="true">☁️</div>
+          <h3 class="service-title">Cloud & Backend</h3>
+          <p class="service-desc">Scalable API infrastructure, cloud deployments, and backend systems that power our products and client platforms around the clock.</p>
+        </div>
+
+        <div class="service-card reveal delay-5">
+          <div class="service-ico" aria-hidden="true">🔐</div>
+          <h3 class="service-title">Security Software</h3>
+          <p class="service-desc">Enterprise-grade data protection tools — encryption, access control, and compliance dashboards built to the strictest industry standards.</p>
+        </div>
+
+        <div class="service-card reveal delay-6">
+          <div class="service-ico" aria-hidden="true">🚀</div>
+          <h3 class="service-title">Software Consulting</h3>
+          <p class="service-desc">Architecture audits, performance optimization, and strategic roadmap planning for teams that demand the highest quality deliverables.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       PROJECTS
+  ================================================================ -->
+  <section id="projects" class="section" aria-labelledby="projects-title">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="s-label">Our Portfolio</p>
+        <h2 id="projects-title" class="s-title">Products We've Shipped</h2>
+        <p class="s-desc">Click any project to explore — real products, real users, real impact.</p>
+        <div class="s-rule"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- 1. NexusDesk -->
+        <article class="project-card reveal delay-1">
+          <div class="project-banner pb-blue">
+            <div class="project-banner-inner">
+              <!-- Desktop software icon -->
+              <div class="project-ico-wrap" style="background:linear-gradient(135deg,#1e4a8a,#2d6ecf);">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8M12 17v4"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-cat">Desktop Software</p>
+            <h3 class="project-name">NexusDesk</h3>
+            <p class="project-desc">A next-generation productivity suite for power users. Virtual desktops, window tiling, system automation, and deep OS integration — all in one cohesive package.</p>
+            <div class="project-tags">
+              <span class="project-tag">Windows</span>
+              <span class="project-tag">macOS</span>
+              <span class="project-tag">C++</span>
+              <span class="project-tag">Qt</span>
+            </div>
+            <a href="https://github.com/leone-nero" target="_blank" rel="noopener" class="project-link" aria-label="View NexusDesk on GitHub">
+              View Project
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. ArenaRush -->
+        <article class="project-card reveal delay-2">
+          <div class="project-banner pb-red">
+            <div class="project-banner-inner">
+              <div class="project-ico-wrap" style="background:linear-gradient(135deg,#8a1e1e,#cf2d2d);">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="6" width="20" height="12" rx="2"/>
+                  <circle cx="7.5" cy="12" r="1.5"/>
+                  <path d="M16 10h2M17 9v2"/>
+                  <circle cx="16" cy="14" r="0.5" fill="white"/>
+                  <circle cx="18" cy="14" r="0.5" fill="white"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-cat">Mobile Game</p>
+            <h3 class="project-name">ArenaRush</h3>
+            <p class="project-desc">An adrenaline-fuelled mobile battle game. Real-time multiplayer arenas, dozens of characters, seasonal events, and cross-platform leaderboards.</p>
+            <div class="project-tags">
+              <span class="project-tag">iOS</span>
+              <span class="project-tag">Android</span>
+              <span class="project-tag">Unity</span>
+              <span class="project-tag">C#</span>
+            </div>
+            <a href="https://github.com/leone-nero" target="_blank" rel="noopener" class="project-link" aria-label="View ArenaRush">
+              View Project
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 3. DataVault Pro -->
+        <article class="project-card reveal delay-3">
+          <div class="project-banner pb-teal">
+            <div class="project-banner-inner">
+              <div class="project-ico-wrap" style="background:linear-gradient(135deg,#0e4a4a,#0d7373);">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="5" y="11" width="14" height="10" rx="2"/>
+                  <path d="M8 11V7a4 4 0 118 0v4"/>
+                  <circle cx="12" cy="16" r="1" fill="white"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-cat">Security Software</p>
+            <h3 class="project-name">DataVault Pro</h3>
+            <p class="project-desc">Military-grade data encryption and access control for enterprises. AES-256, zero-knowledge architecture, and a compliance dashboard for GDPR and ISO 27001.</p>
+            <div class="project-tags">
+              <span class="project-tag">Windows</span>
+              <span class="project-tag">macOS</span>
+              <span class="project-tag">Rust</span>
+              <span class="project-tag">Security</span>
+            </div>
+            <a href="https://github.com/leone-nero" target="_blank" rel="noopener" class="project-link" aria-label="View DataVault Pro">
+              View Project
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. SwiftNote -->
+        <article class="project-card reveal delay-4">
+          <div class="project-banner pb-purple">
+            <div class="project-banner-inner">
+              <div class="project-ico-wrap" style="background:linear-gradient(135deg,#3a1a6e,#6b3dcf);">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-cat">Mobile Application</p>
+            <h3 class="project-name">SwiftNote</h3>
+            <p class="project-desc">The note-taking app that thinks as fast as you do. Rich text, code blocks, tags, reminders, and end-to-end encrypted cloud sync across all your devices.</p>
+            <div class="project-tags">
+              <span class="project-tag">iOS</span>
+              <span class="project-tag">Android</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">React Native</span>
+            </div>
+            <a href="https://github.com/leone-nero" target="_blank" rel="noopener" class="project-link" aria-label="View SwiftNote">
+              View Project
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 5. CloudBridge -->
+        <article class="project-card reveal delay-5">
+          <div class="project-banner pb-cyan">
+            <div class="project-banner-inner">
+              <div class="project-ico-wrap" style="background:linear-gradient(135deg,#0a2a40,#0e5080);">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-cat">Cloud Infrastructure</p>
+            <h3 class="project-name">CloudBridge</h3>
+            <p class="project-desc">A unified control plane for multi-cloud infrastructure. Deploy, monitor, and scale containers across AWS, GCP, and Azure from a single elegant dashboard.</p>
+            <div class="project-tags">
+              <span class="project-tag">Web</span>
+              <span class="project-tag">Go</span>
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">Kubernetes</span>
+            </div>
+            <a href="https://github.com/leone-nero" target="_blank" rel="noopener" class="project-link" aria-label="View CloudBridge">
+              View Project
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 6. PixelQuest -->
+        <article class="project-card reveal delay-6">
+          <div class="project-banner pb-gold">
+            <div class="project-banner-inner">
+              <div class="project-ico-wrap" style="background:linear-gradient(135deg,#4a3008,#8a6020);">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-cat">Mobile Game</p>
+            <h3 class="project-name">PixelQuest</h3>
+            <p class="project-desc">A puzzle-adventure game with hundreds of hand-crafted levels, a rich story, and gorgeous pixel art. Top-charted in 14 countries within its first week.</p>
+            <div class="project-tags">
+              <span class="project-tag">iOS</span>
+              <span class="project-tag">Android</span>
+              <span class="project-tag">Unity</span>
+              <span class="project-tag">C#</span>
+            </div>
+            <a href="https://github.com/leone-nero" target="_blank" rel="noopener" class="project-link" aria-label="View PixelQuest">
+              View Project
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       ABOUT
+  ================================================================ -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="section-inner">
+      <div class="about-grid">
+
+        <!-- Text side -->
+        <div class="about-text">
+          <p class="s-label">About Us</p>
+          <h2 id="about-title" class="s-title reveal reveal-left">The Black Lion<br/>Behind the Code</h2>
+          <p class="reveal reveal-left delay-1">Leone Nero S.r.l. is an independent software house founded on a single conviction: exceptional software is not the result of luck — it is the product of relentless craft, clear vision, and the courage to pursue it.</p>
+          <p class="reveal reveal-left delay-2">We ship desktop applications, mobile apps, and games that earn their place on your device. Every product goes through rigorous design, engineering, and quality assurance cycles before it ever reaches a user.</p>
+          <p class="reveal reveal-left delay-3">Based in Italy, we operate globally. Our team consists of senior engineers, designers, and product strategists who refuse to settle for "good enough."</p>
+
+          <div class="about-vals reveal reveal-left delay-4">
+            <div class="about-val">
+              <span class="about-val-ico">⚡</span>
+              <div>
+                <p class="about-val-title">Performance First</p>
+                <p class="about-val-desc">We never ship bloated code. Every line is optimised for speed and efficiency.</p>
+              </div>
+            </div>
+            <div class="about-val">
+              <span class="about-val-ico">🎨</span>
+              <div>
+                <p class="about-val-title">Design That Matters</p>
+                <p class="about-val-desc">UX and aesthetics are not afterthoughts — they are built into the architecture from day one.</p>
+              </div>
+            </div>
+            <div class="about-val">
+              <span class="about-val-ico">🔒</span>
+              <div>
+                <p class="about-val-title">Security by Default</p>
+                <p class="about-val-desc">Privacy-first architecture, encrypted data handling, and rigorous security audits.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:36px;" class="reveal reveal-left delay-5">
+            <a href="about.html" class="btn btn-primary">Full Company Story</a>
+          </div>
+        </div>
+
+        <!-- Visual side -->
+        <div class="about-visual" aria-hidden="true">
+          <div class="about-lion-wrap">
+            <div class="about-lion-ring"></div>
+            <div class="about-lion-ring-inner"></div>
+            <svg class="about-lion-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Mane rays -->
+              <g fill="#c9a84c" opacity="0.7">
+                <polygon points="80,6  74,30 80,26 86,30"/>
+                <polygon points="108,10 96,32 100,29 103,33"/>
+                <polygon points="130,28 114,44 117,41 121,44"/>
+                <polygon points="143,54 124,62 126,66 122,69"/>
+                <polygon points="145,82 124,83 126,86 122,89"/>
+                <polygon points="136,108 117,99 118,103 114,106"/>
+                <polygon points="116,126 102,110 104,114 100,116"/>
+                <polygon points="88,135 82,116 86,119 80,119"/>
+                <polygon points="72,135 78,116 74,119 80,119"/>
+                <polygon points="44,126 58,110 56,114 60,116"/>
+                <polygon points="24,108 43,99 42,103 46,106"/>
+                <polygon points="15,82 36,83 34,86 38,89"/>
+                <polygon points="17,54 36,62 34,66 38,69"/>
+                <polygon points="30,28 46,44 43,41 39,44"/>
+                <polygon points="52,10 64,32 60,29 57,33"/>
+              </g>
+              <!-- Outer mane -->
+              <circle cx="80" cy="80" r="52" fill="#16100a"/>
+              <circle cx="80" cy="80" r="52" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.25"/>
+              <!-- Face -->
+              <ellipse cx="80" cy="84" rx="38" ry="42" fill="#231608"/>
+              <!-- Brow area -->
+              <ellipse cx="80" cy="64" rx="26" ry="12" fill="#1a1006"/>
+              <!-- Eyes -->
+              <ellipse cx="65" cy="72" rx="9" ry="7" fill="#c9a84c"/>
+              <ellipse cx="95" cy="72" rx="9" ry="7" fill="#c9a84c"/>
+              <ellipse cx="65" cy="72" rx="4.5" ry="6" fill="#080400"/>
+              <ellipse cx="95" cy="72" rx="4.5" ry="6" fill="#080400"/>
+              <circle  cx="62" cy="70" r="1.8" fill="rgba(255,255,255,0.55)"/>
+              <circle  cx="92" cy="70" r="1.8" fill="rgba(255,255,255,0.55)"/>
+              <!-- Nose -->
+              <path d="M74,90 C76,86 84,86 86,90 C88,94 85,98 80,98 C75,98 72,94 74,90Z" fill="#1a0800"/>
+              <!-- Mouth roar -->
+              <path d="M65,104 C70,115 90,115 95,104 L92,101 C87,111 73,111 68,101 Z" fill="#080000"/>
+              <path d="M69,102 L70,110 L73,102" fill="rgba(235,230,215,0.9)"/>
+              <path d="M78,101 L79,109 L82,101" fill="rgba(235,230,215,0.9)"/>
+              <path d="M87,102 L88,110 L91,102" fill="rgba(235,230,215,0.9)"/>
+              <!-- Tongue hint -->
+              <ellipse cx="80" cy="112" rx="8" ry="4" fill="#7a1020" opacity="0.7"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       QUOTE
+  ================================================================ -->
+  <section id="quote" aria-label="Company philosophy">
+    <div class="quote-inner">
+      <div class="quote-icon" aria-hidden="true">❝</div>
+      <blockquote class="quote-text reveal">
+        "We don't just write code. We engineer experiences that respect the user's time, intelligence, and trust."
+      </blockquote>
+      <p class="quote-author reveal delay-2">— Leone Nero S.r.l. Engineering Manifesto</p>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CONTACT
+  ================================================================ -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="s-label">Get In Touch</p>
+        <h2 id="contact-title" class="s-title">Let's Build Something<br/>Extraordinary</h2>
+        <p class="s-desc">Whether you have a project in mind, a question about our products, or just want to say hello — we'd love to hear from you.</p>
+        <div class="s-rule"></div>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info reveal reveal-left">
+          <h3>Reach Us Directly</h3>
+          <p>We respond to all inquiries within one business day. For urgent matters, reach us by phone during business hours (Mon–Fri, 9:00–18:00 CET).</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-ico" aria-hidden="true">📧</div>
+              <div>
+                <strong>Email</strong><br/>
+                <a href="mailto:info@leonenero.com">info@leonenero.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-ico" aria-hidden="true">📞</div>
+              <div>
+                <strong>Phone</strong><br/>
+                +39 02 1234 5678
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-ico" aria-hidden="true">📍</div>
+              <div>
+                <strong>Address</strong><br/>
+                Via della Tecnologia 12, Milano, 20100 IT
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-ico" aria-hidden="true">🕐</div>
+              <div>
+                <strong>Business Hours</strong><br/>
+                Monday – Friday, 9:00 – 18:00 CET
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrap reveal reveal-right">
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name">Full Name</label>
+                <input id="cf-name" type="text" class="form-control" placeholder="Your name" required/>
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email Address</label>
+                <input id="cf-email" type="email" class="form-control" placeholder="you@example.com" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject</label>
+              <select id="cf-subject" class="form-control" required>
+                <option value="" disabled selected>Select a topic…</option>
+                <option>Product Inquiry</option>
+                <option>Business Partnership</option>
+                <option>Support Request</option>
+                <option>Press &amp; Media</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" class="form-control" placeholder="Tell us about your project or question…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+            </button>
+            <p class="form-notice">Your information is never shared with third parties. See our <a href="privacy.html">Privacy Policy</a>.</p>
+          </form>
+          <div id="form-success">
+            ✅ &nbsp;Thank you! We'll be in touch within one business day.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer>
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;" aria-label="Leone Nero home">
+          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g fill="#c9a84c" opacity="0.75">
+              <polygon points="40,4  36,20 40,17 44,20"/>
+              <polygon points="58,8  50,22 53,19 56,22"/>
+              <polygon points="71,21 58,30 60,27 63,30"/>
+              <polygon points="76,38 61,40 63,43 60,46"/>
+              <polygon points="71,56 59,50 60,54 57,57"/>
+              <polygon points="40,72 36,56 40,59 44,56"/>
+              <polygon points="9,21  22,30 20,27 17,30"/>
+              <polygon points="4,38  19,40 17,43 20,46"/>
+              <polygon points="9,56  21,50 20,54 17,57"/>
+            </g>
+            <circle cx="40" cy="40" r="26" fill="#1a1005"/>
+            <ellipse cx="40" cy="42" rx="20" ry="22" fill="#231506"/>
+            <ellipse cx="33" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
+            <ellipse cx="47" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
+            <ellipse cx="33" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
+            <ellipse cx="47" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
+          </svg>
+          <div class="nav-logo-text" style="margin-left:12px;">
+            <span class="nav-logo-name">LEONE NERO</span>
+            <span class="nav-logo-srl">S.r.l.</span>
+          </div>
+        </a>
+        <p class="footer-brand-desc">Premium software engineering house. We build desktop apps, mobile applications, and games that define their category. Based in Milan, serving the world.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/leone-nero" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="X / Twitter">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Company links -->
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-col-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <p class="footer-col-title">Products</p>
+        <ul class="footer-col-links">
+          <li><a href="https://github.com/leone-nero" target="_blank" rel="noopener">NexusDesk</a></li>
+          <li><a href="https://github.com/leone-nero" target="_blank" rel="noopener">ArenaRush</a></li>
+          <li><a href="https://github.com/leone-nero" target="_blank" rel="noopener">DataVault Pro</a></li>
+          <li><a href="https://github.com/leone-nero" target="_blank" rel="noopener">SwiftNote</a></li>
+          <li><a href="https://github.com/leone-nero" target="_blank" rel="noopener">CloudBridge</a></li>
+          <li><a href="https://github.com/leone-nero" target="_blank" rel="noopener">PixelQuest</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <p class="footer-col-title">Legal</p>
+        <ul class="footer-col-links">
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; <span class="js-year"></span> Leone Nero S.r.l. — P.IVA IT12345678901 — All rights reserved.</p>
+      <ul class="footer-legal">
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</div><!-- /#site-wrap -->
+
+<!-- Scripts -->
+<script src="js/loader.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
