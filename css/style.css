@@ -880,6 +880,74 @@ footer {
 .nav-links a.active { color:var(--gold); }
 
 /* ================================================================
+   LANGUAGE TOGGLE BUTTON
+================================================================ */
+.lang-toggle {
+  display:inline-flex; align-items:center; gap:5px;
+  padding:6px 13px; margin-left:6px;
+  border-radius:100px;
+  border:1px solid var(--border);
+  background:transparent;
+  color:var(--text-sub);
+  font-size:0.78rem; font-weight:700; letter-spacing:0.08em;
+  cursor:pointer; font-family:inherit;
+  transition:all var(--ease);
+  flex-shrink:0;
+}
+.lang-toggle:hover { border-color:var(--border-hover); color:var(--gold); }
+.lang-toggle .lang-flag { font-style:normal; font-size:0.85rem; }
+
+/* ================================================================
+   APP STORE / PLAY STORE BADGES
+================================================================ */
+.store-badges {
+  display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap;
+}
+.store-badge {
+  display:flex; align-items:center; gap:8px;
+  padding:7px 12px; border-radius:10px;
+  border:1px solid rgba(255,255,255,0.09);
+  background:rgba(255,255,255,0.04);
+  flex:1; min-width:0; text-decoration:none;
+  transition:all 0.3s ease;
+}
+.store-badge--disabled {
+  opacity:0.42; cursor:default; pointer-events:none;
+}
+.store-badge--active { opacity:1; cursor:pointer; }
+.store-badge--active:hover {
+  border-color:var(--border-hover);
+  background:rgba(201,168,76,0.08);
+}
+.store-badge-ico { width:20px; height:20px; flex-shrink:0; color:rgba(255,255,255,0.65); }
+.store-badge-text { min-width:0; }
+.store-badge-sub {
+  display:block; font-size:0.59rem; color:var(--text-muted);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.store-badge-name {
+  display:block; font-size:0.74rem; font-weight:600;
+  color:rgba(255,255,255,0.7); white-space:nowrap;
+}
+
+/* ================================================================
+   FORM ERROR MESSAGE
+================================================================ */
+#form-error {
+  display:none; margin-top:10px;
+  padding:10px 14px; border-radius:var(--r-s);
+  background:rgba(200,50,50,0.12);
+  border:1px solid rgba(200,50,50,0.25);
+  color:#e07070; font-size:0.82rem; text-align:center;
+}
+#form-success {
+  display:none; flex-direction:column;
+  align-items:center; justify-content:center;
+  text-align:center; padding:36px 20px; gap:8px;
+  color:var(--gold); font-weight:500; font-size:1rem; min-height:120px;
+}
+
+/* ================================================================
    ADDITIONAL RESPONSIVE
 ================================================================ */
 @media(max-width:768px) {

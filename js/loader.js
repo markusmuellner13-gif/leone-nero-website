@@ -7,6 +7,14 @@
   'use strict';
 
   const loader  = document.getElementById('loader');
+
+  /* Skip animation entirely for users who request reduced motion */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.body.classList.add('loaded');
+    if (loader) loader.style.display = 'none';
+    return;
+  }
+
   const canvas  = document.getElementById('loader-canvas');
   const ctx     = canvas.getContext('2d');
 

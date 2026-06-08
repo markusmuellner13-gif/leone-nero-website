@@ -6,64 +6,55 @@
   <meta name="description" content="Leone Nero S.r.l. — Premium software house. We build desktop software, mobile apps, and games that define the digital frontier."/>
   <meta name="keywords" content="Leone Nero, software company, mobile apps, games, desktop software, Italy"/>
   <meta name="author" content="Leone Nero S.r.l."/>
-  <meta property="og:title"       content="Leone Nero S.r.l. — Software · Apps · Games"/>
-  <meta property="og:description" content="We build software that roars. Desktop, mobile, and game releases."/>
-  <meta property="og:type"        content="website"/>
-  <meta property="og:image"       content="og-image.svg"/>
-  <meta property="og:image:width" content="1200"/>
+  <meta property="og:title"        content="Leone Nero S.r.l. — Software · Apps · Games"/>
+  <meta property="og:description"  content="We build software that roars. Desktop, mobile, and game releases."/>
+  <meta property="og:type"         content="website"/>
+  <meta property="og:image"        content="og-image.svg"/>
+  <meta property="og:image:width"  content="1200"/>
   <meta property="og:image:height" content="630"/>
-  <meta name="twitter:card"       content="summary_large_image"/>
-  <meta name="twitter:title"      content="Leone Nero S.r.l. — Software · Apps · Games"/>
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="Leone Nero S.r.l. — Software · Apps · Games"/>
   <meta name="twitter:description" content="We build software that roars."/>
-  <meta name="twitter:image"      content="og-image.svg"/>
+  <meta name="twitter:image"       content="og-image.svg"/>
 
   <title>Leone Nero S.r.l. — Software · Apps · Games</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
   <link rel="stylesheet" href="css/style.css"/>
 
-  <!-- Favicon inline SVG data URI -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230a0a0a'/%3E%3Cellipse cx='16' cy='18' rx='9' ry='10' fill='%23221505'/%3E%3Ccircle cx='16' cy='14' r='12' fill='%23161005'/%3E%3Cellipse cx='11' cy='13' rx='3.5' ry='2.8' fill='%23c9a84c'/%3E%3Cellipse cx='21' cy='13' rx='3.5' ry='2.8' fill='%23c9a84c'/%3E%3Cellipse cx='11' cy='13' rx='1.8' ry='2.5' fill='%230a0500'/%3E%3Cellipse cx='21' cy='13' rx='1.8' ry='2.5' fill='%230a0500'/%3E%3C/svg%3E"/>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg"/>
 </head>
 <body>
 
-<!-- ================================================================
-     LOADER
-================================================================ -->
+<!-- LOADER -->
 <div id="loader" role="status" aria-label="Loading Leone Nero">
   <canvas id="loader-canvas"></canvas>
 </div>
 
-<!-- ================================================================
-     COOKIE CONSENT BANNER
-================================================================ -->
+<!-- COOKIE CONSENT BANNER -->
 <div id="cookie-banner" role="dialog" aria-label="Cookie consent">
-  <p class="cb-text">
+  <p class="cb-text" data-i18n-key="cookie.text" data-i18n-html>
     We use cookies to improve your experience and analyse site usage. See our
     <a href="cookies.html">Cookie Policy</a> and <a href="privacy.html">Privacy Policy</a>.
   </p>
   <div class="cb-actions">
-    <button class="cb-btn cb-decline" id="cb-decline">Decline</button>
-    <button class="cb-btn cb-accept"  id="cb-accept">Accept All</button>
+    <button class="cb-btn cb-decline" id="cb-decline" data-i18n-key="cookie.decline">Decline</button>
+    <button class="cb-btn cb-accept"  id="cb-accept"  data-i18n-key="cookie.accept">Accept All</button>
   </div>
 </div>
 
-<!-- ================================================================
-     SITE WRAPPER
-================================================================ -->
+<!-- SITE WRAPPER -->
 <div id="site-wrap">
 
-  <!-- ── NAVBAR ── -->
+  <!-- NAVBAR -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
-
     <a href="index.html" class="nav-logo" aria-label="Leone Nero home">
-      <!-- Lion icon SVG -->
       <svg class="nav-logo-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <!-- Mane spikes -->
         <g fill="#c9a84c" opacity="0.85">
           <polygon points="40,4  36,20 40,17 44,20"/>
           <polygon points="58,8  50,22 53,19 56,22"/>
@@ -78,27 +69,20 @@
           <polygon points="9,21  22,30 20,27 17,30"/>
           <polygon points="22,8  30,22 27,19 24,22"/>
         </g>
-        <!-- Mane circle -->
         <circle cx="40" cy="40" r="26" fill="#1a1005"/>
-        <!-- Face -->
         <ellipse cx="40" cy="42" rx="20" ry="22" fill="#231506"/>
-        <!-- Eyes -->
         <ellipse cx="33" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
         <ellipse cx="47" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
         <ellipse cx="33" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
         <ellipse cx="47" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
         <circle  cx="32" cy="36" r="1"   fill="rgba(255,255,255,0.5)"/>
         <circle  cx="46" cy="36" r="1"   fill="rgba(255,255,255,0.5)"/>
-        <!-- Nose -->
         <path d="M37,47 C38,44 42,44 43,47 C44,50 42,52 40,52 C38,52 36,50 37,47Z" fill="#1e0800"/>
-        <!-- Roaring mouth -->
         <path d="M32,54 C35,60 45,60 48,54 L46,52 C43,57 37,57 34,52 Z" fill="#0a0000"/>
         <path d="M35,53 L36,58 L38,53" fill="rgba(235,230,215,0.9)"/>
         <path d="M42,53 L43,58 L45,53" fill="rgba(235,230,215,0.9)"/>
-        <!-- Mane ring accent -->
         <circle cx="40" cy="40" r="26" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.3"/>
       </svg>
-
       <div class="nav-logo-text">
         <span class="nav-logo-name">LEONE NERO</span>
         <span class="nav-logo-srl">S.r.l.</span>
@@ -106,12 +90,17 @@
     </a>
 
     <ul class="nav-links" role="list">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact" class="btn-nav-cta">Contact Us</a></li>
+      <li><a href="#hero"     data-i18n-key="nav.home">Home</a></li>
+      <li><a href="#services" data-i18n-key="nav.services">Services</a></li>
+      <li><a href="#projects" data-i18n-key="nav.projects">Projects</a></li>
+      <li><a href="#about"    data-i18n-key="nav.about">About</a></li>
+      <li><a href="#contact" class="btn-nav-cta" data-i18n-key="nav.contact.cta">Contact Us</a></li>
     </ul>
+
+    <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+      <span class="lang-flag" aria-hidden="true">🌐</span>
+      <span class="lang-label">IT</span>
+    </button>
 
     <button id="nav-burger" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -120,11 +109,11 @@
 
   <!-- Mobile nav -->
   <nav id="mobile-nav" aria-label="Mobile navigation">
-    <a href="#hero">Home</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#hero"     data-i18n-key="nav.home">Home</a>
+    <a href="#services" data-i18n-key="nav.services">Services</a>
+    <a href="#projects" data-i18n-key="nav.projects">Projects</a>
+    <a href="#about"    data-i18n-key="nav.about">About</a>
+    <a href="#contact"  data-i18n-key="nav.contact.cta">Contact Us</a>
   </nav>
 
   <!-- ================================================================
@@ -136,53 +125,53 @@
 
     <div class="hero-badge">
       <span class="hero-badge-dot" aria-hidden="true"></span>
-      Crafting the Future of Software
+      <span data-i18n-key="hero.badge">Crafting the Future of Software</span>
     </div>
 
     <h1 class="hero-title">
-      We Build Software<br/>
-      <span class="gold-text">That Roars.</span>
+      <span data-i18n-key="hero.line1">We Build Software</span><br/>
+      <span class="gold-text" data-i18n-key="hero.line2">That Roars.</span>
     </h1>
 
-    <p class="hero-sub">
+    <p class="hero-sub" data-i18n-key="hero.sub">
       Leone Nero S.r.l. delivers precision-engineered desktop software, mobile
       applications, and immersive mobile games — products that leave a mark.
     </p>
 
     <div class="hero-btns">
       <a href="#projects" class="btn btn-primary">
-        View Our Work
+        <span data-i18n-key="hero.btn.work">View Our Work</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      <a href="#contact" class="btn btn-outline" data-i18n-key="hero.btn.contact">Get in Touch</a>
     </div>
 
     <div class="hero-scroll" aria-hidden="true">
       <div class="hero-scroll-line"></div>
-      <span>Scroll</span>
+      <span data-i18n-key="hero.scroll">Scroll</span>
     </div>
   </section>
 
   <!-- ================================================================
-       STATS STRIP
+       STATS
   ================================================================ -->
   <section id="stats" class="section" aria-label="Company statistics">
     <div class="stats-row">
       <div class="stat-item reveal delay-1">
-        <span class="stat-num" data-target="6">0</span>
-        <span class="stat-lbl">Products Released</span>
+        <span class="stat-num" data-target="7">0</span>
+        <span class="stat-lbl" data-i18n-key="stats.products">Products Released</span>
       </div>
       <div class="stat-item reveal delay-2">
         <span class="stat-num" data-target="200000">0</span>
-        <span class="stat-lbl">Active Users</span>
+        <span class="stat-lbl" data-i18n-key="stats.users">Active Users</span>
       </div>
       <div class="stat-item reveal delay-3">
         <span class="stat-num" data-target="4.8">0</span>
-        <span class="stat-lbl">Average App Rating</span>
+        <span class="stat-lbl" data-i18n-key="stats.rating">Average App Rating</span>
       </div>
       <div class="stat-item reveal delay-4">
         <span class="stat-num" data-target="3">0</span>
-        <span class="stat-lbl">Years of Excellence</span>
+        <span class="stat-lbl" data-i18n-key="stats.years">Years of Excellence</span>
       </div>
     </div>
   </section>
@@ -193,50 +182,43 @@
   <section id="services" class="section" aria-labelledby="services-title">
     <div class="section-inner">
       <div class="section-header">
-        <p class="s-label">What We Do</p>
-        <h2 id="services-title" class="s-title">Built With Purpose.<br/>Shipped With Pride.</h2>
-        <p class="s-desc">From enterprise desktop suites to hit mobile games — we cover the full spectrum of modern software.</p>
+        <p class="s-label" data-i18n-key="svc.label">What We Do</p>
+        <h2 id="services-title" class="s-title" data-i18n-key="svc.title">Built With Purpose.<br/>Shipped With Pride.</h2>
+        <p class="s-desc" data-i18n-key="svc.desc">From enterprise desktop suites to hit mobile games — we cover the full spectrum of modern software.</p>
         <div class="s-rule"></div>
       </div>
 
       <div class="services-grid">
-
         <div class="service-card reveal delay-1">
           <div class="service-ico" aria-hidden="true">🖥️</div>
-          <h3 class="service-title">Desktop Software</h3>
-          <p class="service-desc">High-performance native applications for Windows and macOS. We engineer productivity tools, security suites, and professional utilities built to enterprise standards.</p>
+          <h3 class="service-title" data-i18n-key="svc.desktop.title">Desktop Software</h3>
+          <p class="service-desc" data-i18n-key="svc.desktop.desc">High-performance native applications for Windows and macOS. We engineer productivity tools, security suites, and professional utilities built to enterprise standards.</p>
         </div>
-
         <div class="service-card reveal delay-2">
           <div class="service-ico" aria-hidden="true">📱</div>
-          <h3 class="service-title">Mobile Applications</h3>
-          <p class="service-desc">Beautiful, fast iOS and Android apps from scratch. We handle design, engineering, and App Store / Google Play submission — end to end.</p>
+          <h3 class="service-title" data-i18n-key="svc.mobile.title">Mobile Applications</h3>
+          <p class="service-desc" data-i18n-key="svc.mobile.desc">Beautiful, fast iOS and Android apps from scratch. We handle design, engineering, and App Store / Google Play submission — end to end.</p>
         </div>
-
         <div class="service-card reveal delay-3">
           <div class="service-ico" aria-hidden="true">🎮</div>
-          <h3 class="service-title">Mobile Games</h3>
-          <p class="service-desc">Immersive mobile gaming experiences with polished visuals, tight mechanics, and live-ops support. We build games people actually play.</p>
+          <h3 class="service-title" data-i18n-key="svc.games.title">Mobile Games</h3>
+          <p class="service-desc" data-i18n-key="svc.games.desc">Immersive mobile gaming experiences with polished visuals, tight mechanics, and live-ops support. We build games people actually play.</p>
         </div>
-
         <div class="service-card reveal delay-4">
           <div class="service-ico" aria-hidden="true">☁️</div>
-          <h3 class="service-title">Cloud & Backend</h3>
-          <p class="service-desc">Scalable API infrastructure, cloud deployments, and backend systems that power our products and client platforms around the clock.</p>
+          <h3 class="service-title" data-i18n-key="svc.cloud.title">Cloud &amp; Backend</h3>
+          <p class="service-desc" data-i18n-key="svc.cloud.desc">Scalable API infrastructure, cloud deployments, and backend systems that power our products and client platforms around the clock.</p>
         </div>
-
         <div class="service-card reveal delay-5">
           <div class="service-ico" aria-hidden="true">🔐</div>
-          <h3 class="service-title">Security Software</h3>
-          <p class="service-desc">Enterprise-grade data protection tools — encryption, access control, and compliance dashboards built to the strictest industry standards.</p>
+          <h3 class="service-title" data-i18n-key="svc.security.title">Security Software</h3>
+          <p class="service-desc" data-i18n-key="svc.security.desc">Enterprise-grade data protection tools — encryption, access control, and compliance dashboards built to the strictest industry standards.</p>
         </div>
-
         <div class="service-card reveal delay-6">
           <div class="service-ico" aria-hidden="true">🚀</div>
-          <h3 class="service-title">Software Consulting</h3>
-          <p class="service-desc">Architecture audits, performance optimization, and strategic roadmap planning for teams that demand the highest quality deliverables.</p>
+          <h3 class="service-title" data-i18n-key="svc.consult.title">Software Consulting</h3>
+          <p class="service-desc" data-i18n-key="svc.consult.desc">Architecture audits, performance optimization, and strategic roadmap planning for teams that demand the highest quality deliverables.</p>
         </div>
-
       </div>
     </div>
   </section>
@@ -247,9 +229,9 @@
   <section id="projects" class="section" aria-labelledby="projects-title">
     <div class="section-inner">
       <div class="section-header">
-        <p class="s-label">Our Portfolio</p>
-        <h2 id="projects-title" class="s-title">Products We've Shipped</h2>
-        <p class="s-desc">Click any project to explore — real products, real users, real impact.</p>
+        <p class="s-label" data-i18n-key="proj.label">Our Portfolio</p>
+        <h2 id="projects-title" class="s-title" data-i18n-key="proj.title">Products We've Shipped</h2>
+        <p class="s-desc" data-i18n-key="proj.desc">Click any project to explore — real products, real users, real impact.</p>
         <div class="s-rule"></div>
       </div>
 
@@ -282,20 +264,36 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-cat">Mobile App</p>
+            <p class="project-cat" data-i18n-key="proj.kairos.cat">Mobile App</p>
             <h3 class="project-name">KAIROS</h3>
-            <p class="project-desc">A full-featured personal assistant for your phone — dark, futuristic, and faith-aware. Built with React Native &amp; Expo with voice intelligence and a deeply personal UX.</p>
+            <p class="project-desc" data-i18n-key="proj.kairos.desc">A full-featured personal assistant for your phone — dark, futuristic, and faith-aware. Built with React Native &amp; Expo with voice intelligence and a deeply personal UX.</p>
             <div class="project-tags">
               <span class="project-tag">React Native</span>
               <span class="project-tag">TypeScript</span>
               <span class="project-tag">Expo</span>
               <span class="project-tag">AI</span>
             </div>
+            <div class="store-badges">
+              <span class="store-badge store-badge--disabled" aria-label="App Store — Coming Soon">
+                <svg class="store-badge-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <div class="store-badge-text">
+                  <span class="store-badge-sub" data-i18n-key="proj.store.soon">Coming Soon on</span>
+                  <span class="store-badge-name">App Store</span>
+                </div>
+              </span>
+              <span class="store-badge store-badge--disabled" aria-label="Google Play — Coming Soon">
+                <svg class="store-badge-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76c.29.17.62.24.95.2L15.5 12 4.13.04a1.5 1.5 0 00-.95.2C2.6.58 2.25 1.12 2.25 1.88v20.24c0 .76.35 1.3.93 1.64zm13.3-13.37l2.59 2.61-10.9 6.12 8.31-8.73zm2.37-4.56L5.76 2.72l8.93 8.93 3.75-2.81-.59-.01zm1.43 1.14L18.8 9.44l-1.2.9 1.2 1.66 2.48 2.5c.71-.52 1.2-1.26 1.2-2.03v-.5c0-.77-.49-1.51-1.2-2.03z"/></svg>
+                <div class="store-badge-text">
+                  <span class="store-badge-sub" data-i18n-key="proj.store.soon">Coming Soon on</span>
+                  <span class="store-badge-name">Google Play</span>
+                </div>
+              </span>
+            </div>
             <a href="https://github.com/markusmuellner13-gif/KAIROS" target="_blank" rel="noopener" class="project-cta-btn" aria-label="View KAIROS on GitHub">
               <span class="project-cta-ico" style="background:rgba(136,85,255,0.2)">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               </span>
-              <span>View on GitHub</span>
+              <span data-i18n-key="proj.cta.github">View on GitHub</span>
               <svg class="project-cta-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -327,9 +325,9 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-cat">Browser Game</p>
+            <p class="project-cat" data-i18n-key="proj.cw.cat">Browser Game</p>
             <h3 class="project-name">Crossword Universe</h3>
-            <p class="project-desc">Solve crosswords in English and German with points and levels. A polished word-puzzle experience built with TypeScript and deployed on Vercel.</p>
+            <p class="project-desc" data-i18n-key="proj.cw.desc">Solve crosswords in English and German with points and levels. A polished word-puzzle experience built with TypeScript and deployed on Vercel.</p>
             <div class="project-tags">
               <span class="project-tag">TypeScript</span>
               <span class="project-tag">Vercel</span>
@@ -339,7 +337,7 @@
               <span class="project-cta-ico" style="background:rgba(42,95,207,0.25)">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </span>
-              <span>Play Now</span>
+              <span data-i18n-key="proj.cta.play">Play Now</span>
               <svg class="project-cta-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -368,9 +366,9 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-cat">Browser Game</p>
+            <p class="project-cat" data-i18n-key="proj.hoop.cat">Browser Game</p>
             <h3 class="project-name">HoopBlitz</h3>
-            <p class="project-desc">Fast-paced basketball browser game built in JavaScript. Jump into the action directly from your browser — no install required. Hosted on GitHub Pages.</p>
+            <p class="project-desc" data-i18n-key="proj.hoop.desc">Fast-paced basketball browser game built in JavaScript. Jump into the action directly from your browser — no install required. Hosted on GitHub Pages.</p>
             <div class="project-tags">
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">HTML5 Canvas</span>
@@ -380,7 +378,7 @@
               <span class="project-cta-ico" style="background:rgba(200,80,32,0.22)">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </span>
-              <span>Play Now</span>
+              <span data-i18n-key="proj.cta.play">Play Now</span>
               <svg class="project-cta-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -394,7 +392,6 @@
             <a href="https://github.com/markusmuellner13-gif/A-karting-Game" target="_blank" rel="noopener" class="app-icon-btn" aria-label="View A-Karting-Game on GitHub">
               <div class="app-icon" style="background:linear-gradient(135deg,#8a0808,#cf2020)">
                 <svg width="46" height="46" viewBox="0 0 48 48" aria-hidden="true">
-                  <!-- Checkered flag -->
                   <rect x="4"  y="4"  width="10" height="8" fill="white" rx="1"/>
                   <rect x="14" y="4"  width="10" height="8" fill="#1a1a1a" rx="1"/>
                   <rect x="24" y="4"  width="10" height="8" fill="white" rx="1"/>
@@ -403,9 +400,7 @@
                   <rect x="14" y="12" width="10" height="8" fill="white" rx="1"/>
                   <rect x="24" y="12" width="10" height="8" fill="#1a1a1a" rx="1"/>
                   <rect x="34" y="12" width="10" height="8" fill="white" rx="1"/>
-                  <!-- Kart body -->
                   <path d="M7 30h34l-3 10H10Z" fill="#cf2020"/>
-                  <!-- Wheels -->
                   <circle cx="14" cy="40" r="5" fill="#2a2a2a"/>
                   <circle cx="34" cy="40" r="5" fill="#2a2a2a"/>
                   <circle cx="14" cy="40" r="2" fill="#888"/>
@@ -419,9 +414,9 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-cat">Browser Game</p>
+            <p class="project-cat" data-i18n-key="proj.kart.cat">Browser Game</p>
             <h3 class="project-name">A-Karting-Game</h3>
-            <p class="project-desc">A browser-based karting race game with multiplayer co-op, two unique tracks, and three distinct karts. Pure JavaScript racing action, no install needed.</p>
+            <p class="project-desc" data-i18n-key="proj.kart.desc">A browser-based karting race game with multiplayer co-op, two unique tracks, and three distinct karts. Pure JavaScript racing action, no install needed.</p>
             <div class="project-tags">
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">Multiplayer</span>
@@ -431,7 +426,7 @@
               <span class="project-cta-ico" style="background:rgba(207,32,32,0.2)">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               </span>
-              <span>View on GitHub</span>
+              <span data-i18n-key="proj.cta.github">View on GitHub</span>
               <svg class="project-cta-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -445,12 +440,10 @@
             <a href="https://github.com/markusmuellner13-gif/polymath-learn" target="_blank" rel="noopener" class="app-icon-btn" aria-label="View Polymath Learn on GitHub">
               <div class="app-icon" style="background:linear-gradient(135deg,#0c4030,#1a7058)">
                 <svg width="46" height="46" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                  <!-- Book pages -->
                   <path d="M8 10 C8 8 10 6 12 6L24 8L36 6 C38 6 40 8 40 10V40L24 42 8 40V10Z" fill="#0a3020"/>
                   <path d="M24 8V42" stroke="#2ecf88" stroke-width="1.4"/>
                   <path d="M12 14h9M12 19h9M12 24h9M12 29h7" stroke="#2ecf88" stroke-width="1.4" opacity="0.7" stroke-linecap="round"/>
                   <path d="M27 14h9M27 19h9M27 24h9M27 29h7" stroke="#2ecf88" stroke-width="1.4" opacity="0.7" stroke-linecap="round"/>
-                  <!-- Spark / AI indicator -->
                   <circle cx="24" cy="3" r="2.5" fill="#c9a84c"/>
                   <path d="M24 6L21 2M24 6L27 2" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round"/>
                 </svg>
@@ -463,20 +456,36 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-cat">Mobile App</p>
+            <p class="project-cat" data-i18n-key="proj.poly.cat">Mobile App</p>
             <h3 class="project-name">Polymath Learn</h3>
-            <p class="project-desc">AI-powered studying app — learn anything with XP, streaks, and instant explanations. Built with TypeScript and React Native for a seamless cross-platform experience.</p>
+            <p class="project-desc" data-i18n-key="proj.poly.desc">AI-powered studying app — learn anything with XP, streaks, and instant explanations. Built with TypeScript and React Native for a seamless cross-platform experience.</p>
             <div class="project-tags">
               <span class="project-tag">TypeScript</span>
               <span class="project-tag">React Native</span>
               <span class="project-tag">AI</span>
               <span class="project-tag">Expo</span>
             </div>
+            <div class="store-badges">
+              <span class="store-badge store-badge--disabled" aria-label="App Store — Coming Soon">
+                <svg class="store-badge-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <div class="store-badge-text">
+                  <span class="store-badge-sub" data-i18n-key="proj.store.soon">Coming Soon on</span>
+                  <span class="store-badge-name">App Store</span>
+                </div>
+              </span>
+              <span class="store-badge store-badge--disabled" aria-label="Google Play — Coming Soon">
+                <svg class="store-badge-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76c.29.17.62.24.95.2L15.5 12 4.13.04a1.5 1.5 0 00-.95.2C2.6.58 2.25 1.12 2.25 1.88v20.24c0 .76.35 1.3.93 1.64zm13.3-13.37l2.59 2.61-10.9 6.12 8.31-8.73zm2.37-4.56L5.76 2.72l8.93 8.93 3.75-2.81-.59-.01zm1.43 1.14L18.8 9.44l-1.2.9 1.2 1.66 2.48 2.5c.71-.52 1.2-1.26 1.2-2.03v-.5c0-.77-.49-1.51-1.2-2.03z"/></svg>
+                <div class="store-badge-text">
+                  <span class="store-badge-sub" data-i18n-key="proj.store.soon">Coming Soon on</span>
+                  <span class="store-badge-name">Google Play</span>
+                </div>
+              </span>
+            </div>
             <a href="https://github.com/markusmuellner13-gif/polymath-learn" target="_blank" rel="noopener" class="project-cta-btn" aria-label="View Polymath Learn on GitHub">
               <span class="project-cta-ico" style="background:rgba(26,112,88,0.22)">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               </span>
-              <span>View on GitHub</span>
+              <span data-i18n-key="proj.cta.github">View on GitHub</span>
               <svg class="project-cta-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -490,25 +499,16 @@
             <a href="https://github.com/markusmuellner13-gif/pixelrift" target="_blank" rel="noopener" class="app-icon-btn" aria-label="View PixelRift on GitHub">
               <div class="app-icon" style="background:linear-gradient(135deg,#0a4a5a,#0a8888)">
                 <svg width="46" height="46" viewBox="0 0 48 48" aria-hidden="true">
-                  <!-- Pixel character (platformer hero) -->
-                  <!-- Head -->
                   <rect x="16" y="4"  width="16" height="12" fill="#00c9c9"/>
-                  <!-- Eyes -->
-                  <rect x="18" y="7"  width="4" height="4" fill="#050f10"/>
-                  <rect x="26" y="7"  width="4" height="4" fill="#050f10"/>
-                  <!-- Eye shine -->
-                  <rect x="19" y="7"  width="1" height="1" fill="white"/>
-                  <rect x="27" y="7"  width="1" height="1" fill="white"/>
-                  <!-- Body -->
+                  <rect x="18" y="7"  width="4"  height="4"  fill="#050f10"/>
+                  <rect x="26" y="7"  width="4"  height="4"  fill="#050f10"/>
+                  <rect x="19" y="7"  width="1"  height="1"  fill="white"/>
+                  <rect x="27" y="7"  width="1"  height="1"  fill="white"/>
                   <rect x="12" y="16" width="24" height="12" fill="#00a8a8"/>
-                  <!-- Left arm raised (jumping) -->
                   <rect x="4"  y="10" width="8"  height="8"  fill="#00c9c9"/>
-                  <!-- Right arm -->
                   <rect x="36" y="18" width="8"  height="8"  fill="#00c9c9"/>
-                  <!-- Legs (spread apart - jump pose) -->
                   <rect x="12" y="28" width="8"  height="12" fill="#00c9c9"/>
                   <rect x="28" y="32" width="8"  height="8"  fill="#00c9c9"/>
-                  <!-- Trail pixels -->
                   <rect x="24" y="38" width="4"  height="4"  fill="#00c9c9" opacity="0.4"/>
                   <rect x="28" y="42" width="4"  height="4"  fill="#00c9c9" opacity="0.2"/>
                 </svg>
@@ -520,9 +520,9 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-cat">Browser Game</p>
+            <p class="project-cat" data-i18n-key="proj.pixel.cat">Browser Game</p>
             <h3 class="project-name">PixelRift</h3>
-            <p class="project-desc">A pixel-art 2D platformer — leap, explore, and conquer. Gorgeous retro visuals, tight controls, and handcrafted levels built entirely in JavaScript.</p>
+            <p class="project-desc" data-i18n-key="proj.pixel.desc">A pixel-art 2D platformer — leap, explore, and conquer. Gorgeous retro visuals, tight controls, and handcrafted levels built entirely in JavaScript.</p>
             <div class="project-tags">
               <span class="project-tag">JavaScript</span>
               <span class="project-tag">Pixel Art</span>
@@ -532,14 +532,14 @@
               <span class="project-cta-ico" style="background:rgba(10,136,136,0.2)">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               </span>
-              <span>View on GitHub</span>
+              <span data-i18n-key="proj.cta.github">View on GitHub</span>
               <svg class="project-cta-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
         </article>
 
         <!-- Nova Social App -->
-        <article class="project-card reveal delay-1" style="grid-column:auto">
+        <article class="project-card reveal delay-1">
           <div class="app-card-header" style="background:linear-gradient(135deg,#0e0515 0%,#200830 100%)">
             <div class="app-header-glow" aria-hidden="true"></div>
             <div class="app-header-lines" aria-hidden="true"></div>
@@ -547,7 +547,6 @@
               <div class="app-icon" style="background:linear-gradient(135deg,#5a0a40,#b02080)">
                 <svg width="46" height="46" viewBox="0 0 48 48" fill="none" aria-hidden="true">
                   <circle cx="24" cy="24" r="8" fill="#e040c0"/>
-                  <!-- Rays -->
                   <line x1="24" y1="4"  x2="24" y2="13" stroke="#e040c0" stroke-width="2.5" stroke-linecap="round"/>
                   <line x1="24" y1="35" x2="24" y2="44" stroke="#e040c0" stroke-width="2.5" stroke-linecap="round"/>
                   <line x1="4"  y1="24" x2="13" y2="24" stroke="#e040c0" stroke-width="2.5" stroke-linecap="round"/>
@@ -556,7 +555,6 @@
                   <line x1="31" y1="31" x2="38" y2="38" stroke="#e040c0" stroke-width="2" stroke-linecap="round"/>
                   <line x1="38" y1="10" x2="31" y2="17" stroke="#e040c0" stroke-width="2" stroke-linecap="round"/>
                   <line x1="10" y1="38" x2="17" y2="31" stroke="#e040c0" stroke-width="2" stroke-linecap="round"/>
-                  <!-- Node dots -->
                   <circle cx="24" cy="4"  r="2.5" fill="#e040c0"/>
                   <circle cx="24" cy="44" r="2.5" fill="#e040c0"/>
                   <circle cx="4"  cy="24" r="2.5" fill="#e040c0"/>
@@ -570,9 +568,9 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-cat">Social App</p>
+            <p class="project-cat" data-i18n-key="proj.nova.cat">Social App</p>
             <h3 class="project-name">Nova Social</h3>
-            <p class="project-desc">A modern social application built with TypeScript and deployed on Vercel. A sleek, fast, and beautifully designed social networking experience.</p>
+            <p class="project-desc" data-i18n-key="proj.nova.desc">A modern social application built with TypeScript and deployed on Vercel. A sleek, fast, and beautifully designed social networking experience.</p>
             <div class="project-tags">
               <span class="project-tag">TypeScript</span>
               <span class="project-tag">Social</span>
@@ -582,7 +580,7 @@
               <span class="project-cta-ico" style="background:rgba(176,32,128,0.2)">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </span>
-              <span>Open App</span>
+              <span data-i18n-key="proj.cta.open">Open App</span>
               <svg class="project-cta-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -598,51 +596,47 @@
   <section id="about" class="section" aria-labelledby="about-title">
     <div class="section-inner">
       <div class="about-grid">
-
-        <!-- Text side -->
         <div class="about-text">
-          <p class="s-label">About Us</p>
-          <h2 id="about-title" class="s-title reveal reveal-left">The Black Lion<br/>Behind the Code</h2>
-          <p class="reveal reveal-left delay-1">Leone Nero S.r.l. is an independent software house founded on a single conviction: exceptional software is not the result of luck — it is the product of relentless craft, clear vision, and the courage to pursue it.</p>
-          <p class="reveal reveal-left delay-2">We ship desktop applications, mobile apps, and games that earn their place on your device. Every product goes through rigorous design, engineering, and quality assurance cycles before it ever reaches a user.</p>
-          <p class="reveal reveal-left delay-3">Based in Italy, we operate globally. Our team consists of senior engineers, designers, and product strategists who refuse to settle for "good enough."</p>
+          <p class="s-label" data-i18n-key="about.label">About Us</p>
+          <h2 id="about-title" class="s-title reveal reveal-left" data-i18n-key="about.title" data-i18n-html>The Black Lion<br/>Behind the Code</h2>
+          <p class="reveal reveal-left delay-1" data-i18n-key="about.p1">Leone Nero S.r.l. is an independent software house founded on a single conviction: exceptional software is not the result of luck — it is the product of relentless craft, clear vision, and the courage to pursue it.</p>
+          <p class="reveal reveal-left delay-2" data-i18n-key="about.p2">We ship desktop applications, mobile apps, and games that earn their place on your device. Every product goes through rigorous design, engineering, and quality assurance cycles before it ever reaches a user.</p>
+          <p class="reveal reveal-left delay-3" data-i18n-key="about.p3">Based in Italy, we operate globally. Our team consists of senior engineers, designers, and product strategists who refuse to settle for "good enough."</p>
 
           <div class="about-vals reveal reveal-left delay-4">
             <div class="about-val">
               <span class="about-val-ico">⚡</span>
               <div>
-                <p class="about-val-title">Performance First</p>
-                <p class="about-val-desc">We never ship bloated code. Every line is optimised for speed and efficiency.</p>
+                <p class="about-val-title" data-i18n-key="about.val1.title">Performance First</p>
+                <p class="about-val-desc"  data-i18n-key="about.val1.desc">We never ship bloated code. Every line is optimised for speed and efficiency.</p>
               </div>
             </div>
             <div class="about-val">
               <span class="about-val-ico">🎨</span>
               <div>
-                <p class="about-val-title">Design That Matters</p>
-                <p class="about-val-desc">UX and aesthetics are not afterthoughts — they are built into the architecture from day one.</p>
+                <p class="about-val-title" data-i18n-key="about.val2.title">Design That Matters</p>
+                <p class="about-val-desc"  data-i18n-key="about.val2.desc">UX and aesthetics are not afterthoughts — they are built into the architecture from day one.</p>
               </div>
             </div>
             <div class="about-val">
               <span class="about-val-ico">🔒</span>
               <div>
-                <p class="about-val-title">Security by Default</p>
-                <p class="about-val-desc">Privacy-first architecture, encrypted data handling, and rigorous security audits.</p>
+                <p class="about-val-title" data-i18n-key="about.val3.title">Security by Default</p>
+                <p class="about-val-desc"  data-i18n-key="about.val3.desc">Privacy-first architecture, encrypted data handling, and rigorous security audits.</p>
               </div>
             </div>
           </div>
 
           <div style="margin-top:36px;" class="reveal reveal-left delay-5">
-            <a href="about.html" class="btn btn-primary">Full Company Story</a>
+            <a href="about.html" class="btn btn-primary" data-i18n-key="about.cta">Full Company Story</a>
           </div>
         </div>
 
-        <!-- Visual side -->
         <div class="about-visual" aria-hidden="true">
           <div class="about-lion-wrap">
             <div class="about-lion-ring"></div>
             <div class="about-lion-ring-inner"></div>
             <svg class="about-lion-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Mane rays -->
               <g fill="#c9a84c" opacity="0.7">
                 <polygon points="80,6  74,30 80,26 86,30"/>
                 <polygon points="108,10 96,32 100,29 103,33"/>
@@ -660,33 +654,25 @@
                 <polygon points="30,28 46,44 43,41 39,44"/>
                 <polygon points="52,10 64,32 60,29 57,33"/>
               </g>
-              <!-- Outer mane -->
               <circle cx="80" cy="80" r="52" fill="#16100a"/>
               <circle cx="80" cy="80" r="52" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.25"/>
-              <!-- Face -->
               <ellipse cx="80" cy="84" rx="38" ry="42" fill="#231608"/>
-              <!-- Brow area -->
               <ellipse cx="80" cy="64" rx="26" ry="12" fill="#1a1006"/>
-              <!-- Eyes -->
               <ellipse cx="65" cy="72" rx="9" ry="7" fill="#c9a84c"/>
               <ellipse cx="95" cy="72" rx="9" ry="7" fill="#c9a84c"/>
               <ellipse cx="65" cy="72" rx="4.5" ry="6" fill="#080400"/>
               <ellipse cx="95" cy="72" rx="4.5" ry="6" fill="#080400"/>
               <circle  cx="62" cy="70" r="1.8" fill="rgba(255,255,255,0.55)"/>
               <circle  cx="92" cy="70" r="1.8" fill="rgba(255,255,255,0.55)"/>
-              <!-- Nose -->
               <path d="M74,90 C76,86 84,86 86,90 C88,94 85,98 80,98 C75,98 72,94 74,90Z" fill="#1a0800"/>
-              <!-- Mouth roar -->
               <path d="M65,104 C70,115 90,115 95,104 L92,101 C87,111 73,111 68,101 Z" fill="#080000"/>
               <path d="M69,102 L70,110 L73,102" fill="rgba(235,230,215,0.9)"/>
               <path d="M78,101 L79,109 L82,101" fill="rgba(235,230,215,0.9)"/>
               <path d="M87,102 L88,110 L91,102" fill="rgba(235,230,215,0.9)"/>
-              <!-- Tongue hint -->
               <ellipse cx="80" cy="112" rx="8" ry="4" fill="#7a1020" opacity="0.7"/>
             </svg>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -697,10 +683,10 @@
   <section id="quote" aria-label="Company philosophy">
     <div class="quote-inner">
       <div class="quote-icon" aria-hidden="true">❝</div>
-      <blockquote class="quote-text reveal">
+      <blockquote class="quote-text reveal" data-i18n-key="quote.text">
         "We don't just write code. We engineer experiences that respect the user's time, intelligence, and trust."
       </blockquote>
-      <p class="quote-author reveal delay-2">— Leone Nero S.r.l. Engineering Manifesto</p>
+      <p class="quote-author reveal delay-2" data-i18n-key="quote.author">— Leone Nero S.r.l. Engineering Manifesto</p>
     </div>
   </section>
 
@@ -710,14 +696,12 @@
   <section id="news" class="section" aria-labelledby="news-title">
     <div class="section-inner">
       <div class="section-header">
-        <p class="s-label">Latest</p>
-        <h2 id="news-title" class="s-title">Releases &amp; Updates</h2>
-        <p class="s-desc">What we've been shipping lately — new launches, major updates, and project milestones.</p>
+        <p class="s-label" data-i18n-key="news.label">Latest</p>
+        <h2 id="news-title" class="s-title" data-i18n-key="news.title">Releases &amp; Updates</h2>
+        <p class="s-desc" data-i18n-key="news.desc">What we've been shipping lately — new launches, major updates, and project milestones.</p>
         <div class="s-rule"></div>
       </div>
-
       <div class="news-grid">
-
         <div class="news-card reveal delay-1">
           <div class="news-meta">
             <span class="news-tag" style="background:rgba(136,85,255,0.15);color:#9f6fff;">Mobile App</span>
@@ -730,7 +714,6 @@
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
-
         <div class="news-card reveal delay-2">
           <div class="news-meta">
             <span class="news-tag" style="background:rgba(42,95,207,0.15);color:#6a9fff;">Browser Game</span>
@@ -743,7 +726,6 @@
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
-
         <div class="news-card reveal delay-3">
           <div class="news-meta">
             <span class="news-tag" style="background:rgba(10,136,136,0.15);color:#30d8d8;">Browser Game</span>
@@ -756,7 +738,6 @@
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
-
       </div>
     </div>
   </section>
@@ -767,90 +748,74 @@
   <section id="contact" class="section" aria-labelledby="contact-title">
     <div class="section-inner">
       <div class="section-header">
-        <p class="s-label">Get In Touch</p>
-        <h2 id="contact-title" class="s-title">Let's Build Something<br/>Extraordinary</h2>
-        <p class="s-desc">Whether you have a project in mind, a question about our products, or just want to say hello — we'd love to hear from you.</p>
+        <p class="s-label" data-i18n-key="contact.label">Get In Touch</p>
+        <h2 id="contact-title" class="s-title" data-i18n-key="contact.title" data-i18n-html>Let's Build Something<br/>Extraordinary</h2>
+        <p class="s-desc" data-i18n-key="contact.desc">Whether you have a project in mind, a question about our products, or just want to say hello — we'd love to hear from you.</p>
         <div class="s-rule"></div>
       </div>
 
       <div class="contact-grid">
-
-        <!-- Info -->
         <div class="contact-info reveal reveal-left">
-          <h3>Reach Us Directly</h3>
-          <p>We respond to all inquiries within one business day. For urgent matters, reach us by phone during business hours (Mon–Fri, 9:00–18:00 CET).</p>
-
+          <h3 data-i18n-key="contact.info.title">Reach Us Directly</h3>
+          <p data-i18n-key="contact.info.p">We respond to all inquiries within one business day. For urgent matters, reach us by phone during business hours (Mon–Fri, 9:00–18:00 CET).</p>
           <div class="contact-items">
             <div class="contact-item">
               <div class="contact-item-ico" aria-hidden="true">📧</div>
-              <div>
-                <strong>Email</strong><br/>
-                <a href="mailto:info@leonenero.com">info@leonenero.com</a>
-              </div>
+              <div><strong data-i18n-key="contact.email.lbl">Email</strong><br/><a href="mailto:info@leonenero.com">info@leonenero.com</a></div>
             </div>
             <div class="contact-item">
               <div class="contact-item-ico" aria-hidden="true">📞</div>
-              <div>
-                <strong>Phone</strong><br/>
-                +39 02 1234 5678
-              </div>
+              <div><strong data-i18n-key="contact.phone.lbl">Phone</strong><br/>+39 02 1234 5678</div>
             </div>
             <div class="contact-item">
               <div class="contact-item-ico" aria-hidden="true">📍</div>
-              <div>
-                <strong>Address</strong><br/>
-                Via della Tecnologia 12, Milano, 20100 IT
-              </div>
+              <div><strong data-i18n-key="contact.addr.lbl">Address</strong><br/>Via della Tecnologia 12, Milano, 20100 IT</div>
             </div>
             <div class="contact-item">
               <div class="contact-item-ico" aria-hidden="true">🕐</div>
-              <div>
-                <strong>Business Hours</strong><br/>
-                Monday – Friday, 9:00 – 18:00 CET
-              </div>
+              <div><strong data-i18n-key="contact.hours.lbl">Business Hours</strong><br/><span data-i18n-key="contact.hours.val">Monday – Friday, 9:00 – 18:00 CET</span></div>
             </div>
           </div>
         </div>
 
-        <!-- Form -->
         <div class="contact-form-wrap reveal reveal-right">
           <form id="contact-form" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label for="cf-name">Full Name</label>
-                <input id="cf-name" type="text" class="form-control" placeholder="Your name" required/>
+                <label for="cf-name" data-i18n-key="form.name.lbl">Full Name</label>
+                <input id="cf-name" name="name" type="text" class="form-control" placeholder="Your name" required data-i18n-ph="form.name.lbl"/>
               </div>
               <div class="form-group">
-                <label for="cf-email">Email Address</label>
-                <input id="cf-email" type="email" class="form-control" placeholder="you@example.com" required/>
+                <label for="cf-email" data-i18n-key="form.email.lbl">Email Address</label>
+                <input id="cf-email" name="email" type="email" class="form-control" placeholder="you@example.com" required/>
               </div>
             </div>
             <div class="form-group">
-              <label for="cf-subject">Subject</label>
-              <select id="cf-subject" class="form-control" required>
-                <option value="" disabled selected>Select a topic…</option>
-                <option>Product Inquiry</option>
-                <option>Business Partnership</option>
-                <option>Support Request</option>
-                <option>Press &amp; Media</option>
-                <option>Other</option>
+              <label for="cf-subject" data-i18n-key="form.subject.lbl">Subject</label>
+              <select id="cf-subject" name="subject" class="form-control" required>
+                <option value="" disabled selected data-i18n-key="form.subject.ph">Select a topic…</option>
+                <option data-i18n-key="form.opt.product">Product Inquiry</option>
+                <option data-i18n-key="form.opt.partner">Business Partnership</option>
+                <option data-i18n-key="form.opt.support">Support Request</option>
+                <option data-i18n-key="form.opt.press">Press &amp; Media</option>
+                <option data-i18n-key="form.opt.other">Other</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="cf-message">Message</label>
-              <textarea id="cf-message" class="form-control" placeholder="Tell us about your project or question…" required></textarea>
+              <label for="cf-message" data-i18n-key="form.msg.lbl">Message</label>
+              <textarea id="cf-message" name="message" class="form-control" placeholder="Tell us about your project or question…" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
-              Send Message
+              <span data-i18n-key="form.submit">Send Message</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
             </button>
-            <p class="form-notice">Your information is never shared with third parties. See our <a href="privacy.html">Privacy Policy</a>.</p>
+            <p class="form-notice" data-i18n-key="form.notice" data-i18n-html>Your information is never shared with third parties. See our <a href="privacy.html">Privacy Policy</a>.</p>
+            <div id="form-error">Something went wrong — please try again or email us directly.</div>
           </form>
           <div id="form-success">
-            ✅ &nbsp;Thank you! We'll be in touch within one business day.
+            <span data-i18n-key="form.success">✅ &nbsp;Thank you! We'll be in touch within one business day.</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -860,8 +825,6 @@
   ================================================================ -->
   <footer>
     <div class="footer-grid">
-
-      <!-- Brand -->
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="display:inline-flex;" aria-label="Leone Nero home">
           <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -888,7 +851,7 @@
             <span class="nav-logo-srl">S.r.l.</span>
           </div>
         </a>
-        <p class="footer-brand-desc">Premium software engineering house. We build desktop apps, mobile applications, and games that define their category. Based in Milan, serving the world.</p>
+        <p class="footer-brand-desc" data-i18n-key="footer.brand.desc">Premium software engineering house. We build desktop apps, mobile applications, and games that define their category. Based in Milan, serving the world.</p>
         <div class="footer-socials">
           <a href="https://github.com/markusmuellner13-gif" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -905,57 +868,53 @@
         </div>
       </div>
 
-      <!-- Company links -->
       <div>
-        <p class="footer-col-title">Company</p>
+        <p class="footer-col-title" data-i18n-key="footer.company">Company</p>
         <ul class="footer-col-links">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="about.html"  data-i18n-key="footer.col.about">About Us</a></li>
+          <li><a href="#services"   data-i18n-key="footer.col.services">Services</a></li>
+          <li><a href="#projects"   data-i18n-key="footer.col.projects">Projects</a></li>
+          <li><a href="#contact"    data-i18n-key="footer.col.contact">Contact</a></li>
         </ul>
       </div>
 
-      <!-- Products -->
       <div>
-        <p class="footer-col-title">Projects</p>
+        <p class="footer-col-title" data-i18n-key="footer.col.projects">Projects</p>
         <ul class="footer-col-links">
-          <li><a href="https://github.com/markusmuellner13-gif/KAIROS" target="_blank" rel="noopener">KAIROS</a></li>
-          <li><a href="https://crosswords-orcin-omega.vercel.app" target="_blank" rel="noopener">Crossword Universe</a></li>
-          <li><a href="https://markusmuellner13-gif.github.io/hoopblitz/" target="_blank" rel="noopener">HoopBlitz</a></li>
-          <li><a href="https://github.com/markusmuellner13-gif/A-karting-Game" target="_blank" rel="noopener">A-Karting-Game</a></li>
-          <li><a href="https://github.com/markusmuellner13-gif/polymath-learn" target="_blank" rel="noopener">Polymath Learn</a></li>
-          <li><a href="https://github.com/markusmuellner13-gif/pixelrift" target="_blank" rel="noopener">PixelRift</a></li>
-          <li><a href="https://nova-phi-liart.vercel.app" target="_blank" rel="noopener">Nova Social</a></li>
+          <li><a href="https://github.com/markusmuellner13-gif/KAIROS"          target="_blank" rel="noopener">KAIROS</a></li>
+          <li><a href="https://crosswords-orcin-omega.vercel.app"                target="_blank" rel="noopener">Crossword Universe</a></li>
+          <li><a href="https://markusmuellner13-gif.github.io/hoopblitz/"        target="_blank" rel="noopener">HoopBlitz</a></li>
+          <li><a href="https://github.com/markusmuellner13-gif/A-karting-Game"   target="_blank" rel="noopener">A-Karting-Game</a></li>
+          <li><a href="https://github.com/markusmuellner13-gif/polymath-learn"   target="_blank" rel="noopener">Polymath Learn</a></li>
+          <li><a href="https://github.com/markusmuellner13-gif/pixelrift"        target="_blank" rel="noopener">PixelRift</a></li>
+          <li><a href="https://nova-phi-liart.vercel.app"                        target="_blank" rel="noopener">Nova Social</a></li>
         </ul>
       </div>
 
-      <!-- Legal -->
       <div>
-        <p class="footer-col-title">Legal</p>
+        <p class="footer-col-title" data-i18n-key="footer.legal">Legal</p>
         <ul class="footer-col-links">
-          <li><a href="terms.html">Terms of Service</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="terms.html"   data-i18n-key="footer.terms">Terms of Service</a></li>
+          <li><a href="privacy.html" data-i18n-key="footer.privacy">Privacy Policy</a></li>
+          <li><a href="cookies.html" data-i18n-key="footer.cookies">Cookie Policy</a></li>
         </ul>
       </div>
-
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; <span class="js-year"></span> Leone Nero S.r.l. — P.IVA IT12345678901 — All rights reserved.</p>
+      <p class="footer-copy">&copy; <span class="js-year"></span> Leone Nero S.r.l. — P.IVA IT12345678901 — <span data-i18n-key="footer.rights">All rights reserved.</span></p>
       <ul class="footer-legal">
-        <li><a href="terms.html">Terms</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="terms.html"   data-i18n-key="footer.terms.s">Terms</a></li>
+        <li><a href="privacy.html" data-i18n-key="footer.privacy.s">Privacy</a></li>
+        <li><a href="cookies.html" data-i18n-key="footer.cookies.s">Cookies</a></li>
       </ul>
     </div>
   </footer>
 
 </div><!-- /#site-wrap -->
 
-<!-- Scripts -->
 <script src="js/loader.js"></script>
 <script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

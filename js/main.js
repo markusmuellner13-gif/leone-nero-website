@@ -80,22 +80,44 @@
     counters.forEach(c => co.observe(c));
   }
 
-  /* ── Contact form ── */
+  /* ── Contact form — Formspree backend ── */
+  // Sign up free at formspree.io, create a form, then replace the ID below.
+  const FORMSPREE_ID = 'YOUR_FORM_ID';
+
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
       const btn     = contactForm.querySelector('button[type=submit]');
       const success = document.getElementById('form-success');
+      const errMsg  = document.getElementById('form-error');
 
+      const origText = btn.textContent;
       btn.textContent = 'Sending…';
       btn.disabled    = true;
 
-      // Simulate async send
-      setTimeout(() => {
-        contactForm.style.display = 'none';
-        if (success) success.style.display = 'block';
-      }, 1200);
+      fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+        method : 'POST',
+        body   : new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.ok || data.next) {
+          contactForm.style.display = 'none';
+          if (success) success.style.display = 'flex';
+        } else {
+          throw new Error('form rejected');
+        }
+      })
+      .catch(function () {
+        btn.textContent = origText;
+        btn.disabled    = false;
+        if (errMsg) {
+          errMsg.style.display = 'block';
+          setTimeout(function () { errMsg.style.display = 'none'; }, 4000);
+        }
+      });
     });
   }
 

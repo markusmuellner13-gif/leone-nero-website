@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background -->
+  <circle cx="16" cy="16" r="15.5" fill="#0a0a0a"/>
+  <!-- Mane spikes -->
+  <g fill="#c9a84c" opacity="0.88">
+    <polygon points="16,2 14.4,8.2 16,7 17.6,8.2"/>
+    <polygon points="21.8,3.2 19.2,9 20.6,7.8 21.8,9.2"/>
+    <polygon points="26.2,6.8 22.5,11.2 23.8,10.2 25,11.4"/>
+    <polygon points="28.5,12.5 22.4,13.8 23.5,15.2 22.2,16.6"/>
+    <polygon points="26.8,20.2 22.2,18.8 23,20.4 21.8,21.8"/>
+    <polygon points="22.2,25.8 19.4,20.8 20.8,22.2 19.6,23.6"/>
+    <polygon points="16,28.5 14.4,22.4 16,23.8 17.6,22.4"/>
+    <polygon points="9.8,25.8 12.6,20.8 11.2,22.2 12.4,23.6"/>
+    <polygon points="5.2,20.2 9.8,18.8 9,20.4 10.2,21.8"/>
+    <polygon points="3.5,12.5 9.6,13.8 8.5,15.2 9.8,16.6"/>
+    <polygon points="5.8,6.8 9.5,11.2 8.2,10.2 7,11.4"/>
+    <polygon points="10.2,3.2 12.8,9 11.4,7.8 10.2,9.2"/>
+  </g>
+  <!-- Mane circle -->
+  <circle cx="16" cy="16" r="10.5" fill="#1a1005"/>
+  <circle cx="16" cy="16" r="10.5" fill="none" stroke="#c9a84c" stroke-width="0.4" opacity="0.3"/>
+  <!-- Face -->
+  <ellipse cx="16" cy="17.2" rx="7.8" ry="8.8" fill="#231506"/>
+  <!-- Brow -->
+  <ellipse cx="16" cy="13.2" rx="5.2" ry="2.4" fill="#1a1006"/>
+  <!-- Left eye -->
+  <ellipse cx="12.6" cy="14.8" rx="2.1" ry="1.65" fill="#c9a84c"/>
+  <ellipse cx="12.6" cy="14.8" rx="1.05" ry="1.45" fill="#080400"/>
+  <circle cx="12" cy="14.3" r="0.55" fill="rgba(255,255,255,0.55)"/>
+  <!-- Right eye -->
+  <ellipse cx="19.4" cy="14.8" rx="2.1" ry="1.65" fill="#c9a84c"/>
+  <ellipse cx="19.4" cy="14.8" rx="1.05" ry="1.45" fill="#080400"/>
+  <circle cx="18.8" cy="14.3" r="0.55" fill="rgba(255,255,255,0.55)"/>
+  <!-- Nose -->
+  <path d="M14.5,19 C15,17.5 17,17.5 17.5,19 C18,20.5 17.2,21.5 16,21.5 C14.8,21.5 14,20.5 14.5,19Z" fill="#1a0800"/>
+  <!-- Roaring mouth -->
+  <path d="M12.5,22.5 C13.8,25.5 18.2,25.5 19.5,22.5 L18.5,21.8 C17.3,24.2 14.7,24.2 13.5,21.8Z" fill="#080000"/>
+  <path d="M13.5,22 L14,24.5 L15,22" fill="rgba(235,230,215,0.85)"/>
+  <path d="M17,22 L17.5,24.5 L18.5,22" fill="rgba(235,230,215,0.85)"/>
+</svg>
