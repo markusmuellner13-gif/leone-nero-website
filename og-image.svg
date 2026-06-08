@@ -1,0 +1,85 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#080808"/>
+
+  <!-- Grid overlay -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(201,168,76,0.05)" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%"   stop-color="rgba(201,168,76,0.12)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+    <radialGradient id="lionGlow" cx="50%" cy="48%" r="30%">
+      <stop offset="0%"   stop-color="rgba(201,168,76,0.18)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Lion icon (centered left) -->
+  <g transform="translate(160,115) scale(2.5)">
+    <!-- Mane rays -->
+    <g fill="#c9a84c" opacity="0.7">
+      <polygon points="80,6  74,30 80,26 86,30"/>
+      <polygon points="108,10 96,32 100,29 103,33"/>
+      <polygon points="130,28 114,44 117,41 121,44"/>
+      <polygon points="143,54 124,62 126,66 122,69"/>
+      <polygon points="145,82 124,83 126,86 122,89"/>
+      <polygon points="136,108 117,99 118,103 114,106"/>
+      <polygon points="116,126 102,110 104,114 100,116"/>
+      <polygon points="88,135 82,116 86,119 80,119"/>
+      <polygon points="72,135 78,116 74,119 80,119"/>
+      <polygon points="44,126 58,110 56,114 60,116"/>
+      <polygon points="24,108 43,99 42,103 46,106"/>
+      <polygon points="15,82 36,83 34,86 38,89"/>
+      <polygon points="17,54 36,62 34,66 38,69"/>
+      <polygon points="30,28 46,44 43,41 39,44"/>
+      <polygon points="52,10 64,32 60,29 57,33"/>
+    </g>
+    <circle cx="80" cy="80" r="52" fill="#16100a"/>
+    <circle cx="80" cy="80" r="52" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.3"/>
+    <ellipse cx="80" cy="84" rx="38" ry="42" fill="#231608"/>
+    <ellipse cx="80" cy="64" rx="26" ry="12" fill="#1a1006"/>
+    <ellipse cx="65" cy="72" rx="9" ry="7" fill="#c9a84c"/>
+    <ellipse cx="95" cy="72" rx="9" ry="7" fill="#c9a84c"/>
+    <ellipse cx="65" cy="72" rx="4.5" ry="6" fill="#080400"/>
+    <ellipse cx="95" cy="72" rx="4.5" ry="6" fill="#080400"/>
+    <circle cx="62" cy="70" r="1.8" fill="rgba(255,255,255,0.55)"/>
+    <circle cx="92" cy="70" r="1.8" fill="rgba(255,255,255,0.55)"/>
+    <path d="M74,90 C76,86 84,86 86,90 C88,94 85,98 80,98 C75,98 72,94 74,90Z" fill="#1a0800"/>
+    <path d="M65,104 C70,115 90,115 95,104 L92,101 C87,111 73,111 68,101 Z" fill="#080000"/>
+    <path d="M69,102 L70,110 L73,102" fill="rgba(235,230,215,0.85)"/>
+    <path d="M78,101 L79,109 L82,101" fill="rgba(235,230,215,0.85)"/>
+    <path d="M87,102 L88,110 L91,102" fill="rgba(235,230,215,0.85)"/>
+    <ellipse cx="80" cy="112" rx="8" ry="4" fill="#7a1020" opacity="0.6"/>
+  </g>
+
+  <!-- Glow under lion -->
+  <rect width="1200" height="630" fill="url(#lionGlow)"/>
+
+  <!-- Company name -->
+  <text x="630" y="250" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="96" fill="#c9a84c" text-anchor="middle" letter-spacing="6">LEONE NERO</text>
+
+  <!-- Subtitle line -->
+  <line x1="500" y1="280" x2="760" y2="280" stroke="rgba(201,168,76,0.35)" stroke-width="1.5"/>
+
+  <text x="630" y="320" font-family="Georgia, serif" font-size="26" fill="rgba(201,168,76,0.7)" text-anchor="middle" letter-spacing="10">S . R . L .</text>
+
+  <!-- Tagline -->
+  <text x="630" y="390" font-family="'Arial', sans-serif" font-weight="400" font-size="28" fill="rgba(200,196,190,0.65)" text-anchor="middle">Software · Apps · Mobile Games</text>
+
+  <!-- Bottom border accent -->
+  <rect x="0" y="620" width="1200" height="10" fill="url(#gradBorder)"/>
+  <defs>
+    <linearGradient id="gradBorder" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="transparent"/>
+      <stop offset="20%"  stop-color="#c9a84c"/>
+      <stop offset="80%"  stop-color="#c9a84c"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg>

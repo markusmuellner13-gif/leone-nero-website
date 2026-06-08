@@ -161,4 +161,46 @@
     el.textContent = new Date().getFullYear();
   });
 
+  /* ── Cookie Consent Banner ── */
+  (function () {
+    const COOKIE_KEY = 'ln_cookie_consent';
+    const banner    = document.getElementById('cookie-banner');
+    const btnAccept = document.getElementById('cb-accept');
+    const btnDecline= document.getElementById('cb-decline');
+
+    if (!banner) return;
+
+    function dismiss(choice) {
+      banner.classList.remove('cb-visible');
+      try { localStorage.setItem(COOKIE_KEY, choice); } catch (_) {}
+      setTimeout(() => { banner.style.display = 'none'; }, 600);
+    }
+
+    function checkConsent() {
+      try {
+        const stored = localStorage.getItem(COOKIE_KEY);
+        if (stored) return; // already decided
+      } catch (_) {}
+      // Show banner after a short delay
+      setTimeout(() => banner.classList.add('cb-visible'), 1800);
+    }
+
+    if (btnAccept)  btnAccept.addEventListener ('click', () => dismiss('accepted'));
+    if (btnDecline) btnDecline.addEventListener('click', () => dismiss('declined'));
+
+    // Only run consent check after site is loaded
+    if (document.body.classList.contains('loaded')) {
+      checkConsent();
+    } else {
+      document.body.addEventListener('transitionend', function handler() {
+        if (document.body.classList.contains('loaded')) {
+          document.body.removeEventListener('transitionend', handler);
+          checkConsent();
+        }
+      });
+      // Fallback
+      setTimeout(checkConsent, 6000);
+    }
+  })();
+
 })();

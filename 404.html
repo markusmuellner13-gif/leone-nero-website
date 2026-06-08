@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex"/>
+  <title>404 — Page Not Found | Leone Nero S.r.l.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230a0a0a'/%3E%3Ccircle cx='16' cy='16' r='12' fill='%23161005'/%3E%3Cellipse cx='11' cy='13' rx='3.5' ry='2.8' fill='%23c9a84c'/%3E%3Cellipse cx='21' cy='13' rx='3.5' ry='2.8' fill='%23c9a84c'/%3E%3C/svg%3E"/>
+  <style>
+    .not-found-wrap {
+      min-height:100vh;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      text-align:center;
+      padding:40px 20px;
+      position:relative; overflow:hidden;
+    }
+    .not-found-bg {
+      position:absolute; inset:0; pointer-events:none;
+      background:radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,0.05) 0%, transparent 70%);
+    }
+    .not-found-grid {
+      position:absolute; inset:0; pointer-events:none;
+      background-image:
+        linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+      background-size:70px 70px;
+      mask-image:radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+      -webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+    }
+    .not-found-code {
+      font-family:'Playfair Display',serif;
+      font-size:clamp(6rem,20vw,14rem);
+      font-weight:900;
+      line-height:1;
+      background:linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
+      -webkit-background-clip:text; background-clip:text;
+      -webkit-text-fill-color:transparent;
+      position:relative; z-index:1;
+      margin-bottom:16px;
+      animation:fadeSlideUp 0.9s ease 0.2s both;
+    }
+    .not-found-title {
+      font-size:clamp(1.4rem,3vw,2.2rem);
+      margin-bottom:14px;
+      position:relative; z-index:1;
+      animation:fadeSlideUp 0.9s ease 0.4s both;
+    }
+    .not-found-desc {
+      font-size:1rem; color:var(--text-sub);
+      max-width:420px; line-height:1.7;
+      margin-bottom:40px;
+      position:relative; z-index:1;
+      animation:fadeSlideUp 0.9s ease 0.55s both;
+    }
+    .not-found-lion {
+      margin-bottom:32px;
+      animation:float 4s ease-in-out infinite, fadeIn 0.8s ease 0.1s both;
+      position:relative; z-index:1;
+    }
+    .not-found-actions {
+      display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
+      position:relative; z-index:1;
+      animation:fadeSlideUp 0.9s ease 0.7s both;
+    }
+  </style>
+</head>
+<body class="loaded">
+<div id="site-wrap">
+
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Leone Nero home">
+      <svg class="nav-logo-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="#c9a84c" opacity="0.85">
+          <polygon points="40,4  36,20 40,17 44,20"/>
+          <polygon points="58,8  50,22 53,19 56,22"/>
+          <polygon points="9,21  22,30 20,27 17,30"/>
+          <polygon points="4,38  19,40 17,43 20,46"/>
+        </g>
+        <circle cx="40" cy="40" r="26" fill="#1a1005"/>
+        <ellipse cx="40" cy="42" rx="20" ry="22" fill="#231506"/>
+        <ellipse cx="33" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
+        <ellipse cx="47" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
+        <ellipse cx="33" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
+        <ellipse cx="47" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">LEONE NERO</span>
+        <span class="nav-logo-srl">S.r.l.</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="btn-nav-cta">Contact</a></li>
+    </ul>
+    <button id="nav-burger" class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav id="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="not-found-wrap">
+    <div class="not-found-bg"   aria-hidden="true"></div>
+    <div class="not-found-grid" aria-hidden="true"></div>
+
+    <!-- Sad lion -->
+    <div class="not-found-lion" aria-hidden="true">
+      <svg width="120" height="120" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#c9a84c" opacity="0.45">
+          <polygon points="80,6  74,30 80,26 86,30"/>
+          <polygon points="108,10 96,32 100,29 103,33"/>
+          <polygon points="130,28 114,44 117,41 121,44"/>
+          <polygon points="24,108 43,99 42,103 46,106"/>
+          <polygon points="15,82 36,83 34,86 38,89"/>
+          <polygon points="17,54 36,62 34,66 38,69"/>
+          <polygon points="30,28 46,44 43,41 39,44"/>
+          <polygon points="52,10 64,32 60,29 57,33"/>
+        </g>
+        <circle cx="80" cy="80" r="52" fill="#16100a"/>
+        <ellipse cx="80" cy="84" rx="38" ry="42" fill="#231608"/>
+        <ellipse cx="65" cy="72" rx="9" ry="7" fill="#c9a84c" opacity="0.5"/>
+        <ellipse cx="95" cy="72" rx="9" ry="7" fill="#c9a84c" opacity="0.5"/>
+        <!-- Sad eyes — X marks -->
+        <line x1="60" y1="68" x2="70" y2="76" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="70" y1="68" x2="60" y2="76" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="90" y1="68" x2="100" y2="76" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="100" y1="68" x2="90" y2="76" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Sad mouth -->
+        <path d="M74,90 C76,86 84,86 86,90 C88,94 85,98 80,98 C75,98 72,94 74,90Z" fill="#1a0800"/>
+        <path d="M68,108 C72,100 88,100 92,108" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+    </div>
+
+    <p class="not-found-code">404</p>
+    <h1 class="not-found-title">The lion lost its way.</h1>
+    <p class="not-found-desc">This page doesn't exist or has been moved. Even the mightiest code can break a link — let's get you back on track.</p>
+
+    <div class="not-found-actions">
+      <a href="index.html" class="btn btn-primary">
+        Back to Home
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 12L12 3l9 9"/><path d="M12 3v18"/></svg>
+      </a>
+      <a href="index.html#projects" class="btn btn-outline">View Projects</a>
+      <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-bottom" style="max-width:1200px;margin:0 auto;padding:28px clamp(20px,5%,80px);">
+      <p class="footer-copy">&copy; <span class="js-year"></span> Leone Nero S.r.l. — All rights reserved.</p>
+      <ul class="footer-legal">
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
