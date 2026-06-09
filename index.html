@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -34,275 +34,255 @@
 <!-- LOADER -->
 <div id="loader" role="status" aria-label="Loading Leone Nero">
 
-  <!-- Detailed SVG lion — GPU-animated via CSS, no canvas required -->
-  <svg class="loader-lion" viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg class="loader-lion" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs>
-      <!-- Fur displacement texture -->
-      <filter id="lf-fur" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="linearRGB">
-        <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="4" seed="7" result="noise"/>
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
-      </filter>
-      <!-- Soft blur for tooth edges -->
-      <filter id="lf-soft" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur stdDeviation="1.8"/>
-      </filter>
-      <!-- Eye glow -->
-      <filter id="lf-eye-glow" x="-60%" y="-60%" width="220%" height="220%">
-        <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <!-- Glow filters -->
+      <filter id="lf-eye-glow" x="-80%" y="-80%" width="260%" height="260%">
+        <feGaussianBlur stdDeviation="4.5" result="b"/>
         <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="lf-soft" x="-25%" y="-25%" width="150%" height="150%">
+        <feGaussianBlur stdDeviation="2"/>
       </filter>
 
       <!-- Gradients -->
-      <radialGradient id="lf-aura-g" cx="50%" cy="50%" r="50%">
-        <stop offset="0%"   stop-color="#c9a84c" stop-opacity="0.22"/>
-        <stop offset="65%"  stop-color="#c9a84c" stop-opacity="0.05"/>
+      <radialGradient id="lf-aura" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"   stop-color="#c9a84c" stop-opacity="0.38"/>
         <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
       </radialGradient>
-      <radialGradient id="lf-mane-dark-g" cx="50%" cy="50%" r="52%">
+      <radialGradient id="lf-mane1" cx="50%" cy="50%" r="52%">
         <stop offset="50%"  stop-color="#1c1005"/>
-        <stop offset="100%" stop-color="#0d0702"/>
+        <stop offset="100%" stop-color="#0c0703"/>
       </radialGradient>
-      <radialGradient id="lf-mane-mid-g" cx="50%" cy="44%" r="52%">
-        <stop offset="0%"   stop-color="#6e4419"/>
-        <stop offset="42%"  stop-color="#462c0d"/>
-        <stop offset="78%"  stop-color="#2e1a08"/>
-        <stop offset="100%" stop-color="#1b1006"/>
-      </radialGradient>
-      <radialGradient id="lf-face-g" cx="50%" cy="34%" r="60%">
-        <stop offset="0%"   stop-color="#e2a462"/>
-        <stop offset="28%"  stop-color="#cc8a42"/>
-        <stop offset="62%"  stop-color="#b07232"/>
-        <stop offset="100%" stop-color="#885222"/>
-      </radialGradient>
-      <radialGradient id="lf-face-shadow-g" cx="50%" cy="72%" r="55%">
-        <stop offset="0%"   stop-color="rgba(28,8,0,0.72)"/>
-        <stop offset="100%" stop-color="rgba(28,8,0,0)"/>
-      </radialGradient>
-      <radialGradient id="lf-eye-l-g" cx="30%" cy="26%" r="74%" gradientUnits="objectBoundingBox">
-        <stop offset="0%"   stop-color="#ffe255"/>
-        <stop offset="24%"  stop-color="#f2ba28"/>
-        <stop offset="55%"  stop-color="#c27a18"/>
-        <stop offset="84%"  stop-color="#8a4212"/>
-        <stop offset="100%" stop-color="#5c2a08"/>
-      </radialGradient>
-      <radialGradient id="lf-eye-r-g" cx="70%" cy="26%" r="74%" gradientUnits="objectBoundingBox">
-        <stop offset="0%"   stop-color="#ffe255"/>
-        <stop offset="24%"  stop-color="#f2ba28"/>
-        <stop offset="55%"  stop-color="#c27a18"/>
-        <stop offset="84%"  stop-color="#8a4212"/>
-        <stop offset="100%" stop-color="#5c2a08"/>
-      </radialGradient>
-      <radialGradient id="lf-nose-g" cx="28%" cy="22%" r="78%">
-        <stop offset="0%"   stop-color="#d27272"/>
-        <stop offset="32%"  stop-color="#843232"/>
-        <stop offset="74%"  stop-color="#3c1212"/>
-        <stop offset="100%" stop-color="#1c0808"/>
-      </radialGradient>
-      <radialGradient id="lf-mouth-g" cx="50%" cy="24%" r="72%">
-        <stop offset="0%"   stop-color="#7c2222"/>
-        <stop offset="58%"  stop-color="#3a0e0e"/>
-        <stop offset="100%" stop-color="#1a0505"/>
-      </radialGradient>
-      <radialGradient id="lf-tongue-g" cx="50%" cy="28%" r="68%">
-        <stop offset="0%"   stop-color="#f27282"/>
-        <stop offset="52%"  stop-color="#ce3a52"/>
-        <stop offset="100%" stop-color="#8c1a32"/>
-      </radialGradient>
-      <linearGradient id="lf-spike-g" x1="50%" y1="0%" x2="50%" y2="100%">
-        <stop offset="0%"   stop-color="#3e2412"/>
+      <radialGradient id="lf-mane2" cx="50%" cy="44%" r="54%">
+        <stop offset="0%"   stop-color="#3c2212"/>
+        <stop offset="62%"  stop-color="#2a1808"/>
         <stop offset="100%" stop-color="#1c1006"/>
-      </linearGradient>
+      </radialGradient>
+      <radialGradient id="lf-mane3" cx="50%" cy="42%" r="55%">
+        <stop offset="0%"   stop-color="#5e3418"/>
+        <stop offset="54%"  stop-color="#3e2210"/>
+        <stop offset="100%" stop-color="#261608"/>
+      </radialGradient>
+      <radialGradient id="lf-face" cx="48%" cy="33%" r="62%">
+        <stop offset="0%"   stop-color="#dfa264"/>
+        <stop offset="28%"  stop-color="#ca8840"/>
+        <stop offset="65%"  stop-color="#a86c2e"/>
+        <stop offset="100%" stop-color="#7e5020"/>
+      </radialGradient>
+      <radialGradient id="lf-face-bot" cx="50%" cy="78%" r="55%">
+        <stop offset="0%"   stop-color="rgba(20,5,0,0.68)"/>
+        <stop offset="100%" stop-color="rgba(20,5,0,0)"/>
+      </radialGradient>
+      <radialGradient id="lf-el" cx="30%" cy="26%" r="74%" gradientUnits="objectBoundingBox">
+        <stop offset="0%"   stop-color="#ffea5a"/>
+        <stop offset="20%"  stop-color="#f5c02a"/>
+        <stop offset="52%"  stop-color="#ca821e"/>
+        <stop offset="82%"  stop-color="#8e4816"/>
+        <stop offset="100%" stop-color="#602e0c"/>
+      </radialGradient>
+      <radialGradient id="lf-er" cx="70%" cy="26%" r="74%" gradientUnits="objectBoundingBox">
+        <stop offset="0%"   stop-color="#ffea5a"/>
+        <stop offset="20%"  stop-color="#f5c02a"/>
+        <stop offset="52%"  stop-color="#ca821e"/>
+        <stop offset="82%"  stop-color="#8e4816"/>
+        <stop offset="100%" stop-color="#602e0c"/>
+      </radialGradient>
+      <radialGradient id="lf-nose" cx="26%" cy="20%" r="80%">
+        <stop offset="0%"   stop-color="#d87878"/>
+        <stop offset="30%"  stop-color="#8c3a3a"/>
+        <stop offset="72%"  stop-color="#3e1414"/>
+        <stop offset="100%" stop-color="#200808"/>
+      </radialGradient>
+      <radialGradient id="lf-mouth" cx="50%" cy="20%" r="76%">
+        <stop offset="0%"   stop-color="#802424"/>
+        <stop offset="55%"  stop-color="#3c1010"/>
+        <stop offset="100%" stop-color="#1e0606"/>
+      </radialGradient>
+      <radialGradient id="lf-tongue" cx="50%" cy="26%" r="70%">
+        <stop offset="0%"   stop-color="#f47a8a"/>
+        <stop offset="50%"  stop-color="#d24050"/>
+        <stop offset="100%" stop-color="#901c32"/>
+      </radialGradient>
+
+      <!-- Single spike template centred on (0,0), tip pointing up -->
+      <path id="ln-sp" d="M0,-196 C-11,-174 -15,-148 0,-122 C15,-148 11,-174 0,-196 Z"/>
+      <!-- Shorter alternate spike -->
+      <path id="ln-sp2" d="M0,-184 C-9,-164 -12,-140 0,-116 C12,-140 9,-164 0,-184 Z"/>
     </defs>
 
-    <!-- ── AURA glow behind ── -->
-    <ellipse class="ln-aura" cx="200" cy="205" rx="192" ry="184" fill="url(#lf-aura-g)"/>
+    <!-- ── AURA ── -->
+    <ellipse class="ln-aura" cx="250" cy="252" rx="238" ry="230" fill="url(#lf-aura)"/>
 
-    <!-- ── OUTER MANE SPIKES (19 around the head) ── -->
-    <g fill="url(#lf-spike-g)" filter="url(#lf-fur)">
-      <polygon points="200,6   187,64  200,57  213,64"/>
-      <polygon points="233,12  218,70  229,65  237,72"/>
-      <polygon points="263,28  241,80  253,77  259,87"/>
-      <polygon points="288,54  258,97  268,95  272,106"/>
-      <polygon points="305,90  267,118 276,118 278,130"/>
-      <polygon points="309,132 264,145 271,147 270,159"/>
-      <polygon points="296,174 255,172 262,177 257,188"/>
-      <polygon points="272,210 239,194 243,201 237,212"/>
-      <polygon points="240,234 220,200 217,210 210,210"/>
-      <polygon points="200,244 193,207 200,212 207,207"/>
-      <polygon points="160,234 180,200 183,210 190,210"/>
-      <polygon points="128,210 161,194 157,201 163,212"/>
-      <polygon points="104,174 145,172 138,177 143,188"/>
-      <polygon points="91,132  136,145 129,147 130,159"/>
-      <polygon points="95,90   133,118 124,118 122,130"/>
-      <polygon points="112,54  142,97  132,95  128,106"/>
-      <polygon points="137,28  159,80  147,77  141,87"/>
-      <polygon points="167,12  182,70  171,65  163,72"/>
+    <!-- ── MANE OUTER DARK ── -->
+    <circle class="ln-md" cx="250" cy="250" r="202" fill="url(#lf-mane1)"/>
+
+    <!-- ── SPIKES (18 × alternating tall/short) ── -->
+    <g class="ln-spikes" fill="#201208">
+      <use href="#ln-sp"  transform="translate(250,250) rotate(0)"/>
+      <use href="#ln-sp2" transform="translate(250,250) rotate(20)"/>
+      <use href="#ln-sp"  transform="translate(250,250) rotate(40)"/>
+      <use href="#ln-sp2" transform="translate(250,250) rotate(60)"/>
+      <use href="#ln-sp"  transform="translate(250,250) rotate(80)"/>
+      <use href="#ln-sp2" transform="translate(250,250) rotate(100)"/>
+      <use href="#ln-sp"  transform="translate(250,250) rotate(120)"/>
+      <use href="#ln-sp2" transform="translate(250,250) rotate(140)"/>
+      <use href="#ln-sp"  transform="translate(250,250) rotate(160)"/>
+      <use href="#ln-sp2" transform="translate(250,250) rotate(180)"/>
+      <use href="#ln-sp"  transform="translate(250,250) rotate(200)"/>
+      <use href="#ln-sp2" transform="translate(250,250) rotate(220)"/>
+      <use href="#ln-sp"  transform="translate(250,250) rotate(240)"/>
+      <use href="#ln-sp2" transform="translate(250,250) rotate(260)"/>
+      <use href="#ln-sp"  transform="translate(250,250) rotate(280)"/>
+      <use href="#ln-sp2" transform="translate(250,250) rotate(300)"/>
+      <use href="#ln-sp"  transform="translate(250,250) rotate(320)"/>
+      <use href="#ln-sp2" transform="translate(250,250) rotate(340)"/>
     </g>
 
-    <!-- ── OUTER MANE BODY (near black, fur-textured) ── -->
-    <ellipse cx="200" cy="207" rx="163" ry="157" fill="url(#lf-mane-dark-g)" filter="url(#lf-fur)"/>
+    <!-- ── MANE LAYERS ── -->
+    <circle class="ln-mb" cx="250" cy="250" r="180" fill="url(#lf-mane1)"/>
+    <circle class="ln-mm" cx="250" cy="248" r="157" fill="url(#lf-mane2)"/>
+    <circle class="ln-mi" cx="250" cy="246" r="132" fill="url(#lf-mane3)"/>
 
-    <!-- ── INNER MANE (warm dark-amber) ── -->
-    <ellipse cx="200" cy="204" rx="136" ry="129" fill="url(#lf-mane-mid-g)"/>
-
-    <!-- Mane fur direction strokes -->
-    <g opacity="0.22" stroke="#c9a84c" stroke-width="1.2" fill="none" stroke-linecap="round">
-      <path d="M200,80 C199,91 197,103 198,113"/>
-      <path d="M228,85 C225,95 221,108 220,118"/>
-      <path d="M254,100 C248,110 243,123 241,133"/>
-      <path d="M271,124 C264,134 259,147 258,157"/>
-      <path d="M279,152 C272,161 269,174 269,183"/>
-      <path d="M172,85 C175,95 179,108 180,118"/>
-      <path d="M146,100 C152,110 157,123 159,133"/>
-      <path d="M129,124 C136,134 141,147 142,157"/>
-      <path d="M121,152 C128,161 131,174 131,183"/>
+    <!-- Mane fur strokes -->
+    <g opacity="0.2" stroke="#c9a84c" stroke-width="1.2" fill="none" stroke-linecap="round">
+      <path d="M250,118 C249,131 247,146 248,158"/><path d="M286,122 C283,135 279,150 277,162"/>
+      <path d="M319,138 C313,150 307,164 305,176"/><path d="M345,162 C338,173 331,187 330,200"/>
+      <path d="M214,122 C217,135 221,150 223,162"/><path d="M181,138 C187,150 193,164 195,176"/>
+      <path d="M155,162 C162,173 169,186 170,199"/>
     </g>
 
-    <!-- ── FACE BASE ── -->
-    <ellipse cx="200" cy="198" rx="106" ry="114" fill="url(#lf-face-g)"/>
-    <!-- Face shadow (bottom depth) -->
-    <ellipse cx="200" cy="222" rx="104" ry="92" fill="url(#lf-face-shadow-g)" opacity="0.68"/>
+    <!-- ── FACE ── -->
+    <path class="ln-face"
+      d="M250,154 C320,151 372,178 378,224 C386,272 371,310 354,334 C342,352 326,372 313,386 C301,397 280,407 250,407 C220,407 199,397 187,386 C174,372 158,352 146,334 C129,310 114,272 122,224 C128,178 180,151 250,154 Z"
+      fill="url(#lf-face)"/>
+    <!-- Face bottom shadow -->
+    <path
+      d="M250,154 C320,151 372,178 378,224 C386,272 371,310 354,334 C342,352 326,372 313,386 C301,397 280,407 250,407 C220,407 199,397 187,386 C174,372 158,352 146,334 C129,310 114,272 122,224 C128,178 180,151 250,154 Z"
+      fill="url(#lf-face-bot)" opacity="0.65"/>
     <!-- Forehead highlight -->
-    <ellipse cx="200" cy="152" rx="54" ry="25" fill="#e8b87a" opacity="0.2"/>
-    <!-- Centre forehead dark stripe -->
-    <path d="M196,142 C197,150 197,163 197,170 L203,170 C203,163 203,150 204,142 Z" fill="#a06428" opacity="0.22"/>
+    <ellipse cx="250" cy="190" rx="66" ry="29" fill="#e8b07c" opacity="0.17"/>
 
-    <!-- ── ROAR WRINKLE LINES ── -->
-    <g fill="none" stroke="#7c4c22" stroke-linecap="round" opacity="0.52">
-      <path d="M186,160 C192,152 200,149 208,152 C214,155 218,161" stroke-width="3.2"/>
-      <path d="M178,168 C186,160 193,157 200,158"                  stroke-width="2.1"/>
-      <path d="M222,168 C214,160 207,157 200,158"                  stroke-width="2.1"/>
+    <!-- ── ROAR WRINKLES ── -->
+    <g fill="none" stroke="#7c4e24" stroke-linecap="round" opacity="0.5">
+      <path d="M224,204 C232,193 243,188 254,189 C264,191 272,198 276,206" stroke-width="3.5"/>
+      <path d="M215,213 C225,202 237,197 249,198" stroke-width="2.2"/>
+      <path d="M285,213 C275,202 263,197 251,198" stroke-width="2.2"/>
     </g>
 
-    <!-- ── BROW RIDGES (furrowed for roar) ── -->
-    <path d="M148,170 C157,160 170,156 182,158 C190,160 195,165 193,172"
-          fill="none" stroke="#6a3a16" stroke-width="5.8" stroke-linecap="round" opacity="0.88"/>
-    <path d="M252,170 C243,160 230,156 218,158 C210,160 205,165 207,172"
-          fill="none" stroke="#6a3a16" stroke-width="5.8" stroke-linecap="round" opacity="0.88"/>
+    <!-- ── BROW RIDGES ── -->
+    <path d="M178,218 C191,203 210,198 224,202 C236,206 241,213 239,221"
+          fill="none" stroke="#6a3e1a" stroke-width="7.5" stroke-linecap="round" opacity="0.88"/>
+    <path d="M322,218 C309,203 290,198 276,202 C264,206 259,213 261,221"
+          fill="none" stroke="#6a3e1a" stroke-width="7.5" stroke-linecap="round" opacity="0.88"/>
 
     <!-- ── EYE SOCKETS ── -->
-    <ellipse cx="164" cy="185" rx="27" ry="21" fill="#4c2812" opacity="0.78"/>
-    <ellipse cx="236" cy="185" rx="27" ry="21" fill="#4c2812" opacity="0.78"/>
+    <ellipse cx="200" cy="230" rx="36" ry="27" fill="#4e2e16" opacity="0.72"/>
+    <ellipse cx="300" cy="230" rx="36" ry="27" fill="#4e2e16" opacity="0.72"/>
 
-    <!-- ── LEFT EYE ── -->
+    <!-- ── LEFT EYE (almond) ── -->
     <g class="ln-eye-l" filter="url(#lf-eye-glow)">
-      <ellipse cx="164" cy="184" rx="21" ry="17" fill="url(#lf-eye-l-g)"/>
-      <!-- Vertical slit pupil -->
-      <ellipse cx="164" cy="184" rx="5.5" ry="14.5" fill="#080300"/>
-      <ellipse cx="164" cy="184" rx="3.5" ry="12.5" fill="#040200"/>
-      <!-- Iris ring -->
-      <ellipse cx="164" cy="184" rx="20" ry="16" fill="none" stroke="#ffd040" stroke-width="0.7" opacity="0.38"/>
-      <!-- Catchlights -->
-      <circle cx="157" cy="177" r="4.8" fill="rgba(255,255,255,0.84)"/>
-      <circle cx="170" cy="190" r="2.2" fill="rgba(255,255,255,0.36)"/>
+      <path d="M168,228 C175,211 189,205 204,209 C220,213 228,226 222,239 C215,250 197,254 180,249 C163,244 160,236 168,228 Z"
+            fill="url(#lf-el)"/>
+      <ellipse cx="195" cy="228" rx="7.5" ry="19" fill="#080300" transform="rotate(-6,195,228)"/>
+      <ellipse cx="195" cy="228" rx="4.5" ry="15" fill="#040100" transform="rotate(-6,195,228)"/>
+      <path d="M168,228 C175,211 189,205 204,209 C220,213 228,226 222,239 C215,250 197,254 180,249 C163,244 160,236 168,228 Z"
+            fill="none" stroke="#ffd848" stroke-width="0.8" opacity="0.35"/>
+      <circle cx="184" cy="217" r="7" fill="rgba(255,255,255,0.86)"/>
+      <circle cx="210" cy="238" r="3.2" fill="rgba(255,255,255,0.38)"/>
     </g>
 
-    <!-- ── RIGHT EYE ── -->
+    <!-- ── RIGHT EYE (almond) ── -->
     <g class="ln-eye-r" filter="url(#lf-eye-glow)">
-      <ellipse cx="236" cy="184" rx="21" ry="17" fill="url(#lf-eye-r-g)"/>
-      <ellipse cx="236" cy="184" rx="5.5" ry="14.5" fill="#080300"/>
-      <ellipse cx="236" cy="184" rx="3.5" ry="12.5" fill="#040200"/>
-      <ellipse cx="236" cy="184" rx="20" ry="16" fill="none" stroke="#ffd040" stroke-width="0.7" opacity="0.38"/>
-      <circle cx="229" cy="177" r="4.8" fill="rgba(255,255,255,0.84)"/>
-      <circle cx="242" cy="190" r="2.2" fill="rgba(255,255,255,0.36)"/>
+      <path d="M332,228 C325,211 311,205 296,209 C280,213 272,226 278,239 C285,250 303,254 320,249 C337,244 340,236 332,228 Z"
+            fill="url(#lf-er)"/>
+      <ellipse cx="305" cy="228" rx="7.5" ry="19" fill="#080300" transform="rotate(6,305,228)"/>
+      <ellipse cx="305" cy="228" rx="4.5" ry="15" fill="#040100" transform="rotate(6,305,228)"/>
+      <path d="M332,228 C325,211 311,205 296,209 C280,213 272,226 278,239 C285,250 303,254 320,249 C337,244 340,236 332,228 Z"
+            fill="none" stroke="#ffd848" stroke-width="0.8" opacity="0.35"/>
+      <circle cx="316" cy="217" r="7" fill="rgba(255,255,255,0.86)"/>
+      <circle cx="290" cy="238" r="3.2" fill="rgba(255,255,255,0.38)"/>
     </g>
 
     <!-- ── CHEEK POUCHES ── -->
-    <ellipse cx="148" cy="218" rx="36" ry="29" fill="#cc7c3a" opacity="0.32"/>
-    <ellipse cx="252" cy="218" rx="36" ry="29" fill="#cc7c3a" opacity="0.32"/>
+    <ellipse cx="178" cy="275" rx="46" ry="37" fill="#cc8040" opacity="0.26"/>
+    <ellipse cx="322" cy="275" rx="46" ry="37" fill="#cc8040" opacity="0.26"/>
 
     <!-- Whisker follicle spots -->
-    <g fill="#8c5230" opacity="0.72">
-      <circle cx="160" cy="222" r="3.5"/><circle cx="149" cy="229" r="3.5"/>
-      <circle cx="163" cy="236" r="3"/><circle cx="152" cy="242" r="2.5"/>
-      <circle cx="240" cy="222" r="3.5"/><circle cx="251" cy="229" r="3.5"/>
-      <circle cx="237" cy="236" r="3"/><circle cx="248" cy="242" r="2.5"/>
+    <g fill="#8e5630" opacity="0.68">
+      <circle cx="200" cy="280" r="4.2"/><circle cx="183" cy="290" r="4.2"/>
+      <circle cx="202" cy="299" r="3.8"/><circle cx="186" cy="308" r="3"/>
+      <circle cx="300" cy="280" r="4.2"/><circle cx="317" cy="290" r="4.2"/>
+      <circle cx="298" cy="299" r="3.8"/><circle cx="314" cy="308" r="3"/>
     </g>
 
-    <!-- ── NOSE BRIDGE ── -->
-    <path d="M194,198 C197,203 200,207 206,203 C203,198 199,196 194,198 Z" fill="#9c5228" opacity="0.52"/>
-
     <!-- ── NOSE ── -->
-    <path d="M183,217 C186,209 191,205 200,204 C209,205 214,209 217,217 C221,224 218,233 213,236 C209,238 200,240 200,240 C200,240 191,238 187,236 C182,233 179,224 183,217 Z"
-          fill="url(#lf-nose-g)"/>
-    <!-- Nostrils -->
-    <ellipse cx="190" cy="222" rx="6.5" ry="5.5" fill="#100505" opacity="0.96"/>
-    <ellipse cx="210" cy="222" rx="6.5" ry="5.5" fill="#100505" opacity="0.96"/>
-    <!-- Nose highlight -->
-    <ellipse cx="193" cy="213" rx="4.5" ry="3" fill="rgba(255,215,195,0.28)" transform="rotate(-8,193,213)"/>
+    <path class="ln-nose"
+      d="M228,274 C232,263 239,257 250,256 C261,257 268,263 272,274 C276,285 272,297 266,302 C261,305 250,308 250,308 C250,308 239,305 234,302 C228,297 224,285 228,274 Z"
+      fill="url(#lf-nose)"/>
+    <ellipse cx="239" cy="280" rx="8.5" ry="7" fill="#120606" opacity="0.96"/>
+    <ellipse cx="261" cy="280" rx="8.5" ry="7" fill="#120606" opacity="0.96"/>
+    <ellipse cx="242" cy="271" rx="5.5" ry="3.5" fill="rgba(255,220,200,0.26)" transform="rotate(-10,242,271)"/>
 
-    <!-- ── PHILTRUM groove ── -->
-    <line x1="200" y1="240" x2="200" y2="255" stroke="#8a4222" stroke-width="2.5" stroke-linecap="round" opacity="0.62"/>
+    <!-- ── PHILTRUM ── -->
+    <line x1="250" y1="308" x2="250" y2="325" stroke="#8a4426" stroke-width="3.2" stroke-linecap="round" opacity="0.58"/>
 
-    <!-- ── UPPER LIP CURVES ── -->
-    <path d="M166,255 C179,246 190,243 200,244 C210,243 221,246 234,255"
-          fill="none" stroke="#7c3e1c" stroke-width="3.5" stroke-linecap="round" opacity="0.72"/>
+    <!-- ── UPPER LIP ── -->
+    <path d="M208,325 C224,313 238,308 250,309 C262,308 276,313 292,325"
+          fill="none" stroke="#7e4222" stroke-width="4.8" stroke-linecap="round" opacity="0.68"/>
 
-    <!-- ── OPEN JAW (outer shape) ── -->
-    <path d="M163,260 C170,251 183,245 200,245 C217,245 230,251 237,260 L244,282 C242,303 233,322 221,330 C214,335 200,339 200,339 C200,339 186,335 179,330 C167,322 158,303 156,282 Z"
-          fill="#2c1208"/>
+    <!-- ── JAW (outer) ── -->
+    <path class="ln-jaw"
+      d="M207,332 C218,320 233,313 250,313 C267,313 282,320 293,332 L302,358 C299,384 289,408 274,418 C267,424 250,428 250,428 C250,428 233,424 226,418 C211,408 201,384 198,358 Z"
+      fill="#2e1408"/>
 
     <!-- Mouth interior -->
-    <path d="M169,265 C176,257 187,252 200,252 C213,252 224,257 231,265 L237,283 C235,301 226,318 215,325 C210,328 200,331 200,331 C200,331 190,328 185,325 C174,318 165,301 163,283 Z"
-          fill="url(#lf-mouth-g)"/>
+    <path
+      d="M213,339 C224,327 236,321 250,321 C264,321 276,327 287,339 L295,362 C292,385 283,406 268,415 C263,418 250,422 250,422 C250,422 237,418 232,415 C217,406 208,385 205,362 Z"
+      fill="url(#lf-mouth)"/>
 
-    <!-- Palate line -->
-    <path d="M176,266 C184,259 191,255 200,255 C209,255 216,259 224,266"
-          fill="none" stroke="#5c1a1a" stroke-width="1.8" opacity="0.58"/>
+    <!-- Palate ridge -->
+    <path d="M220,341 C228,333 238,328 250,328 C262,328 272,333 280,341"
+          fill="none" stroke="#601e1e" stroke-width="2" opacity="0.52"/>
 
     <!-- ── UPPER TEETH ── -->
-    <!-- Left large canine -->
-    <path d="M171,259 L168,287 C168,290 170.5,292 173,292 C175.5,292 178,290 178,287 L175,259 Z"
-          fill="#f4efe4" filter="url(#lf-soft)"/>
-    <path d="M172,261 L170,282" stroke="#d8d2c2" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
-    <!-- Left small incisor -->
-    <path d="M181,257 L180,272 C180,274 181.5,275 183,275 C184.5,275 186,274 186,272 L184,257 Z"
-          fill="#eee9de" filter="url(#lf-soft)"/>
-    <!-- Right small incisor -->
-    <path d="M219,257 L221,272 C221,274 219.5,275 218,275 C216.5,275 215,274 215,272 L217,257 Z"
-          fill="#eee9de" filter="url(#lf-soft)"/>
-    <!-- Right large canine -->
-    <path d="M229,259 L232,287 C232,290 229.5,292 227,292 C224.5,292 222,290 222,287 L225,259 Z"
-          fill="#f4efe4" filter="url(#lf-soft)"/>
-    <path d="M228,261 L230,282" stroke="#d8d2c2" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+    <path class="ln-tooth" d="M213,335 L209,372 C209,377 212.5,380 217,380 C221.5,380 225,377 225,372 L221,335 Z" fill="#f6f0e4" filter="url(#lf-soft)"/>
+    <line x1="215" y1="337" x2="213" y2="364" stroke="#d8d0bc" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+    <path class="ln-tooth" d="M226,333 L225,351 C225,354 226.5,355.5 228.5,355.5 C230.5,355.5 232,354 232,351 L230,333 Z" fill="#eeead8" filter="url(#lf-soft)"/>
+    <path class="ln-tooth" d="M274,333 L276,351 C276,354 274.5,355.5 272.5,355.5 C270.5,355.5 269,354 269,351 L271,333 Z" fill="#eeead8" filter="url(#lf-soft)"/>
+    <path class="ln-tooth" d="M287,335 L291,372 C291,377 287.5,380 283,380 C278.5,380 275,377 275,372 L279,335 Z" fill="#f6f0e4" filter="url(#lf-soft)"/>
+    <line x1="285" y1="337" x2="287" y2="364" stroke="#d8d0bc" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
 
     <!-- ── TONGUE ── -->
-    <path d="M182,292 C186,278 191,272 200,272 C209,272 214,278 218,292 C223,308 218,324 210,329 C206,331 200,333 200,333 C200,333 194,331 190,329 C182,324 177,308 182,292 Z"
-          fill="url(#lf-tongue-g)"/>
-    <!-- Tongue centre groove -->
-    <line x1="200" y1="275" x2="200" y2="328" stroke="#9e2a3a" stroke-width="2.3" stroke-linecap="round" opacity="0.52"/>
-    <!-- Tongue highlight -->
-    <ellipse cx="193" cy="285" rx="7" ry="4.5" fill="rgba(255,185,200,0.26)" transform="rotate(-8,193,285)"/>
-    <!-- Tongue tip curl -->
-    <path d="M192,323 C195,327 200,329 208,326 C203,330 195,328 192,323 Z" fill="#a82a3c" opacity="0.58"/>
+    <path class="ln-tongue"
+      d="M227,378 C232,360 239,350 250,350 C261,350 268,360 273,378 C279,398 273,418 265,424 C260,427 250,429 250,429 C250,429 240,427 235,424 C227,418 221,398 227,378 Z"
+      fill="url(#lf-tongue)"/>
+    <line x1="250" y1="354" x2="250" y2="422" stroke="#a02e3c" stroke-width="3" stroke-linecap="round" opacity="0.48"/>
+    <ellipse cx="242" cy="364" rx="10" ry="5.5" fill="rgba(255,190,205,0.22)" transform="rotate(-8,242,364)"/>
 
     <!-- ── LOWER TEETH ── -->
-    <path d="M181,310 L178,289 C178,287 179.5,286 181,286 C182.5,286 184,287 184,289 L183,310 Z"
-          fill="#ece7dc" opacity="0.9" filter="url(#lf-soft)"/>
-    <path d="M219,310 L222,289 C222,287 220.5,286 219,286 C217.5,286 216,287 216,289 L217,310 Z"
-          fill="#ece7dc" opacity="0.9" filter="url(#lf-soft)"/>
+    <path class="ln-tooth" d="M228,400 L225,376 C225,374 226.5,373 228.5,373 C230.5,373 232,374 232,376 L230,400 Z" fill="#ece6d8" opacity="0.88" filter="url(#lf-soft)"/>
+    <path class="ln-tooth" d="M272,400 L275,376 C275,374 273.5,373 271.5,373 C269.5,373 268,374 268,376 L270,400 Z" fill="#ece6d8" opacity="0.88" filter="url(#lf-soft)"/>
 
     <!-- ── WHISKERS ── -->
-    <g stroke="rgba(230,220,195,0.70)" stroke-width="1.3" stroke-linecap="round" fill="none">
-      <line x1="165" y1="232" x2="103" y2="222"/>
-      <line x1="164" y1="239" x2="101" y2="239"/>
-      <line x1="166" y1="246" x2="105" y2="253"/>
-      <line x1="158" y1="224" x2="104" y2="213"/>
-      <line x1="235" y1="232" x2="297" y2="222"/>
-      <line x1="236" y1="239" x2="299" y2="239"/>
-      <line x1="234" y1="246" x2="295" y2="253"/>
-      <line x1="242" y1="224" x2="296" y2="213"/>
+    <g class="ln-whiskers" stroke="rgba(238,228,202,0.74)" stroke-width="1.6" stroke-linecap="round" fill="none">
+      <line x1="206" y1="286" x2="118" y2="274"/>
+      <line x1="205" y1="297" x2="116" y2="297"/>
+      <line x1="207" y1="308" x2="120" y2="320"/>
+      <line x1="196" y1="277" x2="116" y2="262"/>
+      <line x1="294" y1="286" x2="382" y2="274"/>
+      <line x1="295" y1="297" x2="384" y2="297"/>
+      <line x1="293" y1="308" x2="380" y2="320"/>
+      <line x1="304" y1="277" x2="384" y2="262"/>
     </g>
   </svg>
 
-  <!-- Brand name revealed during roar -->
   <div class="loader-brand" aria-hidden="true">
     <span class="loader-brand-name">LEONE NERO</span>
-    <span class="loader-brand-srl">S &nbsp;·&nbsp; R &nbsp;·&nbsp; L &nbsp;·</span>
+    <span class="loader-brand-srl">S &nbsp;&middot;&nbsp; R &nbsp;&middot;&nbsp; L &nbsp;&middot;</span>
   </div>
 
 </div>
-
 <!-- COOKIE CONSENT BANNER -->
 <div id="cookie-banner" role="dialog" aria-label="Cookie consent">
   <p class="cb-text" data-i18n-key="cookie.text" data-i18n-html>
@@ -1180,6 +1160,7 @@
 
 </div><!-- /#site-wrap -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/loader.js"></script>
 <script src="js/main.js"></script>
 <script src="js/i18n.js"></script>
