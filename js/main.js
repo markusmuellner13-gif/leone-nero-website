@@ -82,7 +82,7 @@
 
   /* ── Contact form — Formspree backend ── */
   // Sign up free at formspree.io, create a form, then replace the ID below.
-  const FORMSPREE_ID = 'YOUR_FORM_ID';
+  const FORMSPREE_ID = 'xpqerqad';
 
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
