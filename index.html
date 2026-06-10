@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -36,244 +36,161 @@
 
   <svg class="loader-lion" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs>
-      <!-- Glow filters -->
-      <filter id="lf-eye-glow" x="-80%" y="-80%" width="260%" height="260%">
-        <feGaussianBlur stdDeviation="4.5" result="b"/>
-        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-      </filter>
-      <filter id="lf-soft" x="-25%" y="-25%" width="150%" height="150%">
-        <feGaussianBlur stdDeviation="2"/>
-      </filter>
-
-      <!-- Gradients -->
-      <radialGradient id="lf-aura" cx="50%" cy="50%" r="50%">
-        <stop offset="0%"   stop-color="#c9a84c" stop-opacity="0.38"/>
+      <radialGradient id="rl-aura" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"  stop-color="#c9a84c" stop-opacity="0.30"/>
+        <stop offset="70%" stop-color="#c9a84c" stop-opacity="0.07"/>
         <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
       </radialGradient>
-      <radialGradient id="lf-mane1" cx="50%" cy="50%" r="52%">
-        <stop offset="50%"  stop-color="#1c1005"/>
-        <stop offset="100%" stop-color="#0c0703"/>
+      <radialGradient id="rl-mane-o" cx="50%" cy="42%" r="58%">
+        <stop offset="0%"   stop-color="#16110a"/>
+        <stop offset="70%"  stop-color="#0c0906"/>
+        <stop offset="100%" stop-color="#060404"/>
       </radialGradient>
-      <radialGradient id="lf-mane2" cx="50%" cy="44%" r="54%">
-        <stop offset="0%"   stop-color="#3c2212"/>
-        <stop offset="62%"  stop-color="#2a1808"/>
-        <stop offset="100%" stop-color="#1c1006"/>
+      <radialGradient id="rl-mane-m" cx="50%" cy="40%" r="58%">
+        <stop offset="0%"   stop-color="#241a0e"/>
+        <stop offset="70%"  stop-color="#150e07"/>
+        <stop offset="100%" stop-color="#0a0705"/>
       </radialGradient>
-      <radialGradient id="lf-mane3" cx="50%" cy="42%" r="55%">
-        <stop offset="0%"   stop-color="#5e3418"/>
-        <stop offset="54%"  stop-color="#3e2210"/>
-        <stop offset="100%" stop-color="#261608"/>
+      <radialGradient id="rl-mane-i" cx="50%" cy="38%" r="58%">
+        <stop offset="0%"   stop-color="#352513"/>
+        <stop offset="70%"  stop-color="#1e1409"/>
+        <stop offset="100%" stop-color="#100a05"/>
       </radialGradient>
-      <radialGradient id="lf-face" cx="48%" cy="33%" r="62%">
-        <stop offset="0%"   stop-color="#dfa264"/>
-        <stop offset="28%"  stop-color="#ca8840"/>
-        <stop offset="65%"  stop-color="#a86c2e"/>
-        <stop offset="100%" stop-color="#7e5020"/>
+      <radialGradient id="rl-face" cx="50%" cy="30%" r="70%">
+        <stop offset="0%"   stop-color="#4a3a24"/>
+        <stop offset="45%"  stop-color="#322514"/>
+        <stop offset="100%" stop-color="#17100a"/>
       </radialGradient>
-      <radialGradient id="lf-face-bot" cx="50%" cy="78%" r="55%">
-        <stop offset="0%"   stop-color="rgba(20,5,0,0.68)"/>
-        <stop offset="100%" stop-color="rgba(20,5,0,0)"/>
+      <radialGradient id="rl-jaw" cx="50%" cy="20%" r="80%">
+        <stop offset="0%"   stop-color="#33271a"/>
+        <stop offset="100%" stop-color="#120c08"/>
       </radialGradient>
-      <radialGradient id="lf-el" cx="30%" cy="26%" r="74%" gradientUnits="objectBoundingBox">
-        <stop offset="0%"   stop-color="#ffea5a"/>
-        <stop offset="20%"  stop-color="#f5c02a"/>
-        <stop offset="52%"  stop-color="#ca821e"/>
-        <stop offset="82%"  stop-color="#8e4816"/>
-        <stop offset="100%" stop-color="#602e0c"/>
+      <radialGradient id="rl-eye" cx="35%" cy="30%" r="75%">
+        <stop offset="0%"   stop-color="#ffe97a"/>
+        <stop offset="35%"  stop-color="#f2c032"/>
+        <stop offset="75%"  stop-color="#b67a1a"/>
+        <stop offset="100%" stop-color="#6e4410"/>
       </radialGradient>
-      <radialGradient id="lf-er" cx="70%" cy="26%" r="74%" gradientUnits="objectBoundingBox">
-        <stop offset="0%"   stop-color="#ffea5a"/>
-        <stop offset="20%"  stop-color="#f5c02a"/>
-        <stop offset="52%"  stop-color="#ca821e"/>
-        <stop offset="82%"  stop-color="#8e4816"/>
-        <stop offset="100%" stop-color="#602e0c"/>
+      <radialGradient id="rl-mouth" cx="50%" cy="18%" r="80%">
+        <stop offset="0%"   stop-color="#6e1d1d"/>
+        <stop offset="55%"  stop-color="#3a0e0e"/>
+        <stop offset="100%" stop-color="#1c0505"/>
       </radialGradient>
-      <radialGradient id="lf-nose" cx="26%" cy="20%" r="80%">
-        <stop offset="0%"   stop-color="#d87878"/>
-        <stop offset="30%"  stop-color="#8c3a3a"/>
-        <stop offset="72%"  stop-color="#3e1414"/>
-        <stop offset="100%" stop-color="#200808"/>
+      <radialGradient id="rl-tongue" cx="50%" cy="25%" r="75%">
+        <stop offset="0%"   stop-color="#d9606e"/>
+        <stop offset="60%"  stop-color="#a82e40"/>
+        <stop offset="100%" stop-color="#6e1626"/>
       </radialGradient>
-      <radialGradient id="lf-mouth" cx="50%" cy="20%" r="76%">
-        <stop offset="0%"   stop-color="#802424"/>
-        <stop offset="55%"  stop-color="#3c1010"/>
-        <stop offset="100%" stop-color="#1e0606"/>
-      </radialGradient>
-      <radialGradient id="lf-tongue" cx="50%" cy="26%" r="70%">
-        <stop offset="0%"   stop-color="#f47a8a"/>
-        <stop offset="50%"  stop-color="#d24050"/>
-        <stop offset="100%" stop-color="#901c32"/>
-      </radialGradient>
-
-      <!-- Single spike template centred on (0,0), tip pointing up -->
-      <path id="ln-sp" d="M0,-196 C-11,-174 -15,-148 0,-122 C15,-148 11,-174 0,-196 Z"/>
-      <!-- Shorter alternate spike -->
-      <path id="ln-sp2" d="M0,-184 C-9,-164 -12,-140 0,-116 C12,-140 9,-164 0,-184 Z"/>
+      <filter id="rl-glow" x="-80%" y="-80%" width="260%" height="260%">
+        <feGaussianBlur stdDeviation="5" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="rl-soft" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="1.4"/>
+      </filter>
     </defs>
 
-    <!-- ── AURA ── -->
-    <ellipse class="ln-aura" cx="250" cy="252" rx="238" ry="230" fill="url(#lf-aura)"/>
+    <!-- aura -->
+    <circle class="rl-aura" cx="250" cy="250" r="245" fill="url(#rl-aura)"/>
 
-    <!-- ── MANE OUTER DARK ── -->
-    <circle class="ln-md" cx="250" cy="250" r="202" fill="url(#lf-mane1)"/>
-
-    <!-- ── SPIKES (18 × alternating tall/short) ── -->
-    <g class="ln-spikes" fill="#201208">
-      <use href="#ln-sp"  transform="translate(250,250) rotate(0)"/>
-      <use href="#ln-sp2" transform="translate(250,250) rotate(20)"/>
-      <use href="#ln-sp"  transform="translate(250,250) rotate(40)"/>
-      <use href="#ln-sp2" transform="translate(250,250) rotate(60)"/>
-      <use href="#ln-sp"  transform="translate(250,250) rotate(80)"/>
-      <use href="#ln-sp2" transform="translate(250,250) rotate(100)"/>
-      <use href="#ln-sp"  transform="translate(250,250) rotate(120)"/>
-      <use href="#ln-sp2" transform="translate(250,250) rotate(140)"/>
-      <use href="#ln-sp"  transform="translate(250,250) rotate(160)"/>
-      <use href="#ln-sp2" transform="translate(250,250) rotate(180)"/>
-      <use href="#ln-sp"  transform="translate(250,250) rotate(200)"/>
-      <use href="#ln-sp2" transform="translate(250,250) rotate(220)"/>
-      <use href="#ln-sp"  transform="translate(250,250) rotate(240)"/>
-      <use href="#ln-sp2" transform="translate(250,250) rotate(260)"/>
-      <use href="#ln-sp"  transform="translate(250,250) rotate(280)"/>
-      <use href="#ln-sp2" transform="translate(250,250) rotate(300)"/>
-      <use href="#ln-sp"  transform="translate(250,250) rotate(320)"/>
-      <use href="#ln-sp2" transform="translate(250,250) rotate(340)"/>
+    <!-- shockwave rings (hidden until the roar) -->
+    <g class="rl-waves" fill="none" stroke="#c9a84c">
+      <circle class="rl-wave" cx="250" cy="290" r="46" stroke-width="5" opacity="0"/>
+      <circle class="rl-wave" cx="250" cy="290" r="46" stroke-width="3.5" opacity="0"/>
+      <circle class="rl-wave" cx="250" cy="290" r="46" stroke-width="2.5" opacity="0"/>
     </g>
 
-    <!-- ── MANE LAYERS ── -->
-    <circle class="ln-mb" cx="250" cy="250" r="180" fill="url(#lf-mane1)"/>
-    <circle class="ln-mm" cx="250" cy="248" r="157" fill="url(#lf-mane2)"/>
-    <circle class="ln-mi" cx="250" cy="246" r="132" fill="url(#lf-mane3)"/>
+    <g class="rl-lion">
+      <!-- mane -->
+      <path class="rl-mane-o" d="M250,70 Q283.82,21.63 324.53,23.97 Q309.5,111 318.88,83.7 Q357.18,71.1 390.34,87.12 Q358.17,144.35 377.28,122.72 Q435.4,112.44 462.53,142.88 Q390.36,193.79 416.3,181.12 Q452.29,199.28 464.41,234.07 Q401.19,251.78 430,250 Q478.37,283.82 476.03,324.53 Q389,309.5 416.3,318.88 Q428.9,357.18 412.88,390.34 Q355.65,358.17 377.28,377.28 Q387.56,435.4 357.12,462.53 Q306.21,390.36 318.88,416.3 Q300.72,452.29 265.93,464.41 Q248.22,401.19 250,430 Q216.18,478.37 175.47,476.03 Q190.5,389 181.12,416.3 Q142.82,428.9 109.66,412.88 Q141.83,355.65 122.72,377.28 Q64.6,387.56 37.47,357.12 Q109.64,306.21 83.7,318.88 Q47.71,300.72 35.59,265.93 Q98.81,248.22 70,250 Q21.63,216.18 23.97,175.47 Q111,190.5 83.7,181.12 Q71.1,142.82 87.12,109.66 Q144.35,141.83 122.72,122.72 Q112.44,64.6 142.88,37.47 Q193.79,109.64 181.12,83.7 Q199.28,47.71 234.07,35.59 Q251.78,98.81 250,70 Z" fill="url(#rl-mane-o)"/>
+      <path class="rl-mane-m" d="M250,102 Q264.68,60.45 276.79,55.84 Q281.73,129.8 314.21,116.66 Q338.65,97.33 350.64,98.36 Q330.74,155.47 365.71,157.72 Q407.35,143.29 418.51,149.89 Q363.76,199.86 394.29,217.07 Q424.63,224.12 431.31,234.14 Q374.25,254.18 394.29,282.93 Q431.53,306.49 433.33,319.33 Q360.13,307.68 365.71,342.28 Q379.11,370.4 375.45,381.86 Q324.2,349.75 314.21,383.34 Q319.02,427.15 310.1,436.56 Q273.57,372.07 250,398 Q236.37,426.01 225.12,430.29 Q218.27,370.2 185.79,383.34 Q154.53,414.41 141.62,413.31 Q169.26,344.53 134.29,342.28 Q103.89,349.08 93.53,342.96 Q136.24,300.14 105.71,282.93 Q61.93,277.87 54.75,267.08 Q125.75,245.82 105.71,217.07 Q81.43,197.54 79.77,185.63 Q139.87,192.32 134.29,157.72 Q110.96,120.34 114.91,107.99 Q175.8,150.25 185.79,116.66 Q185.91,85.5 194.19,76.77 Q226.43,127.93 250,102 Z"   fill="url(#rl-mane-m)"/>
+      <path class="rl-mane-i" d="M250,132 Q276.02,100.93 305.91,104.36 Q296.38,162.4 309,147.81 Q340.84,141.35 363.46,158.12 Q333.97,197.33 352.19,191 Q392.1,198 404.08,225.6 Q349.05,246.37 368,250 Q389.51,274.35 386.3,302.32 Q337.6,296.38 352.19,309 Q366.09,347.06 348.17,371.23 Q302.67,333.97 309,352.19 Q298.67,382.99 272.84,394.2 Q253.63,349.05 250,368 Q223.98,399.07 194.09,395.64 Q203.62,337.6 191,352.19 Q159.16,358.65 136.54,341.88 Q166.03,302.67 147.81,309 Q107.9,302 95.92,274.4 Q150.95,253.63 132,250 Q110.49,225.65 113.7,197.68 Q162.4,203.62 147.81,191 Q133.91,152.94 151.83,128.77 Q197.33,166.03 191,147.81 Q201.33,117.01 227.16,105.8 Q246.37,150.95 250,132 Z" fill="url(#rl-mane-i)"/>
 
-    <!-- Mane fur strokes -->
-    <g opacity="0.2" stroke="#c9a84c" stroke-width="1.2" fill="none" stroke-linecap="round">
-      <path d="M250,118 C249,131 247,146 248,158"/><path d="M286,122 C283,135 279,150 277,162"/>
-      <path d="M319,138 C313,150 307,164 305,176"/><path d="M345,162 C338,173 331,187 330,200"/>
-      <path d="M214,122 C217,135 221,150 223,162"/><path d="M181,138 C187,150 193,164 195,176"/>
-      <path d="M155,162 C162,173 169,186 170,199"/>
-    </g>
+      <!-- mane fur sheen -->
+      <g class="rl-fur" opacity="0.16" stroke="#c9a84c" stroke-width="2" fill="none" stroke-linecap="round">
+        <path d="M250,62 C247,86 245,108 247,128"/>
+        <path d="M306,72 C299,94 292,114 290,132"/>
+        <path d="M352,100 C341,118 331,136 327,152"/>
+        <path d="M194,72 C201,94 208,114 210,132"/>
+        <path d="M148,100 C159,118 169,136 173,152"/>
+        <path d="M385,146 C371,160 359,176 353,190"/>
+        <path d="M115,146 C129,160 141,176 147,190"/>
+      </g>
 
-    <!-- ── FACE ── -->
-    <path class="ln-face"
-      d="M250,154 C320,151 372,178 378,224 C386,272 371,310 354,334 C342,352 326,372 313,386 C301,397 280,407 250,407 C220,407 199,397 187,386 C174,372 158,352 146,334 C129,310 114,272 122,224 C128,178 180,151 250,154 Z"
-      fill="url(#lf-face)"/>
-    <!-- Face bottom shadow -->
-    <path
-      d="M250,154 C320,151 372,178 378,224 C386,272 371,310 354,334 C342,352 326,372 313,386 C301,397 280,407 250,407 C220,407 199,397 187,386 C174,372 158,352 146,334 C129,310 114,272 122,224 C128,178 180,151 250,154 Z"
-      fill="url(#lf-face-bot)" opacity="0.65"/>
-    <!-- Forehead highlight -->
-    <ellipse cx="250" cy="190" rx="66" ry="29" fill="#e8b07c" opacity="0.17"/>
+      <!-- ears -->
+      <path d="M150,110 Q135,65 177,53 Q205,68 207,105 Q177,90 150,110Z" fill="#17110a"/>
+      <path d="M350,110 Q365,65 323,53 Q295,68 293,105 Q323,90 350,110Z" fill="#17110a"/>
+      <path d="M163,98 Q158,73 180,65 Q195,78 197,98 Q180,88 163,98Z" fill="#0a0705"/>
+      <path d="M337,98 Q342,73 320,65 Q305,78 303,98 Q320,88 337,98Z" fill="#0a0705"/>
 
-    <!-- ── ROAR WRINKLES ── -->
-    <g fill="none" stroke="#7c4e24" stroke-linecap="round" opacity="0.5">
-      <path d="M224,204 C232,193 243,188 254,189 C264,191 272,198 276,206" stroke-width="3.5"/>
-      <path d="M215,213 C225,202 237,197 249,198" stroke-width="2.2"/>
-      <path d="M285,213 C275,202 263,197 251,198" stroke-width="2.2"/>
-    </g>
+      <!-- MOUTH GROUP (cavity + tongue + lower jaw) — GSAP scales this open -->
+      <g class="rl-mouth">
+        <path d="M200,270 Q250,250 300,270 Q306,320 250,355 Q194,320 200,270Z" fill="url(#rl-mouth)"/>
+        <path d="M220,290 Q250,275 280,290 Q285,326 250,341 Q215,326 220,290Z" fill="url(#rl-tongue)"/>
+        <path d="M250,284 L250,338" stroke="#7e1c2e" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+        <!-- lower jaw + lower fangs -->
+        <path d="M198,330 Q250,316 302,330 Q298,366 250,378 Q202,366 198,330Z" fill="url(#rl-jaw)"/>
+        <path d="M216,334 C217,318 220,308 226,302 C231,310 232,322 230,337 Z" fill="#e8dfc8" filter="url(#rl-soft)"/>
+        <path d="M284,334 C283,318 280,308 274,302 C269,310 268,322 270,337 Z" fill="#e8dfc8" filter="url(#rl-soft)"/>
+      </g>
 
-    <!-- ── BROW RIDGES ── -->
-    <path d="M178,218 C191,203 210,198 224,202 C236,206 241,213 239,221"
-          fill="none" stroke="#6a3e1a" stroke-width="7.5" stroke-linecap="round" opacity="0.88"/>
-    <path d="M322,218 C309,203 290,198 276,202 C264,206 259,213 261,221"
-          fill="none" stroke="#6a3e1a" stroke-width="7.5" stroke-linecap="round" opacity="0.88"/>
+      <!-- upper face -->
+      <path class="rl-face" d=" M250,100 C 292,100 322,115 332,142 C 347,160 350,185 340,207 L 355,220 L 335,227 L 347,250 L 322,247 C 317,261 308,272 296,279 Q 272,291 250,271 Q 228,291 204,279 C 192,272 183,261 178,247 L 153,250 L 165,227 L 145,220 L 160,207 C 150,185 153,160 168,142 C 178,115 208,100 250,100 Z" fill="url(#rl-face)"/>
+      <!-- forehead highlight -->
+      <ellipse cx="250" cy="150" rx="68" ry="28" fill="#6e5630" opacity="0.18"/>
 
-    <!-- ── EYE SOCKETS ── -->
-    <ellipse cx="200" cy="230" rx="36" ry="27" fill="#4e2e16" opacity="0.72"/>
-    <ellipse cx="300" cy="230" rx="36" ry="27" fill="#4e2e16" opacity="0.72"/>
+      <!-- roar wrinkles on the muzzle (revealed during roar) -->
+      <g class="rl-wrinkles" fill="none" stroke="#0d0905" stroke-linecap="round" opacity="0">
+        <path d="M222,196 C232,186 244,182 256,184 C266,186 274,192 278,199" stroke-width="6"/>
+        <path d="M214,210 C226,199 240,194 253,196" stroke-width="4"/>
+        <path d="M286,210 C274,199 260,194 247,196" stroke-width="4"/>
+      </g>
 
-    <!-- ── LEFT EYE (almond) ── -->
-    <g class="ln-eye-l" filter="url(#lf-eye-glow)">
-      <path d="M168,228 C175,211 189,205 204,209 C220,213 228,226 222,239 C215,250 197,254 180,249 C163,244 160,236 168,228 Z"
-            fill="url(#lf-el)"/>
-      <ellipse cx="195" cy="228" rx="7.5" ry="19" fill="#080300" transform="rotate(-6,195,228)"/>
-      <ellipse cx="195" cy="228" rx="4.5" ry="15" fill="#040100" transform="rotate(-6,195,228)"/>
-      <path d="M168,228 C175,211 189,205 204,209 C220,213 228,226 222,239 C215,250 197,254 180,249 C163,244 160,236 168,228 Z"
-            fill="none" stroke="#ffd848" stroke-width="0.8" opacity="0.35"/>
-      <circle cx="184" cy="217" r="7" fill="rgba(255,255,255,0.86)"/>
-      <circle cx="210" cy="238" r="3.2" fill="rgba(255,255,255,0.38)"/>
-    </g>
+      <!-- brows -->
+      <path class="rl-brow" d="M170,168 Q195,140 232,150 L245,174 Q210,158 180,180 Z" fill="#100b06"/>
+      <path class="rl-brow" d="M330,168 Q305,140 268,150 L255,174 Q290,158 320,180 Z" fill="#100b06"/>
 
-    <!-- ── RIGHT EYE (almond) ── -->
-    <g class="ln-eye-r" filter="url(#lf-eye-glow)">
-      <path d="M332,228 C325,211 311,205 296,209 C280,213 272,226 278,239 C285,250 303,254 320,249 C337,244 340,236 332,228 Z"
-            fill="url(#lf-er)"/>
-      <ellipse cx="305" cy="228" rx="7.5" ry="19" fill="#080300" transform="rotate(6,305,228)"/>
-      <ellipse cx="305" cy="228" rx="4.5" ry="15" fill="#040100" transform="rotate(6,305,228)"/>
-      <path d="M332,228 C325,211 311,205 296,209 C280,213 272,226 278,239 C285,250 303,254 320,249 C337,244 340,236 332,228 Z"
-            fill="none" stroke="#ffd848" stroke-width="0.8" opacity="0.35"/>
-      <circle cx="316" cy="217" r="7" fill="rgba(255,255,255,0.86)"/>
-      <circle cx="290" cy="238" r="3.2" fill="rgba(255,255,255,0.38)"/>
-    </g>
+      <!-- eyes -->
+      <g class="rl-eyes">
+        <g class="rl-eye-l" filter="url(#rl-glow)">
+          <path d="M185,180 Q215,165 242,198 Q208,198 191,190 Q185,185 185,180Z" fill="url(#rl-eye)"/>
+          <ellipse cx="213" cy="186" rx="7" ry="11" fill="#0a0500" transform="rotate(-14,213,186)"/>
+          <circle cx="204" cy="179" r="4" fill="rgba(255,255,255,0.85)"/>
+        </g>
+        <g class="rl-eye-r" filter="url(#rl-glow)">
+          <path d="M315,180 Q285,165 258,198 Q292,198 309,190 Q315,185 315,180Z" fill="url(#rl-eye)"/>
+          <ellipse cx="287" cy="186" rx="7" ry="11" fill="#0a0500" transform="rotate(14,287,186)"/>
+          <circle cx="296" cy="179" r="4" fill="rgba(255,255,255,0.85)"/>
+        </g>
+      </g>
 
-    <!-- ── CHEEK POUCHES ── -->
-    <ellipse cx="178" cy="275" rx="46" ry="37" fill="#cc8040" opacity="0.26"/>
-    <ellipse cx="322" cy="275" rx="46" ry="37" fill="#cc8040" opacity="0.26"/>
+      <!-- nose -->
+      <path class="rl-nose" d="M222,222 Q250,206 278,222 Q284,244 250,258 Q216,244 222,222Z" fill="#0c0807"/>
+      <ellipse cx="236" cy="226" rx="7" ry="5" fill="#000" opacity="0.9"/>
+      <ellipse cx="264" cy="226" rx="7" ry="5" fill="#000" opacity="0.9"/>
+      <ellipse cx="240" cy="217" rx="9" ry="4" fill="#3a2a1c" opacity="0.55" transform="rotate(-12,240,217)"/>
 
-    <!-- Whisker follicle spots -->
-    <g fill="#8e5630" opacity="0.68">
-      <circle cx="200" cy="280" r="4.2"/><circle cx="183" cy="290" r="4.2"/>
-      <circle cx="202" cy="299" r="3.8"/><circle cx="186" cy="308" r="3"/>
-      <circle cx="300" cy="280" r="4.2"/><circle cx="317" cy="290" r="4.2"/>
-      <circle cx="298" cy="299" r="3.8"/><circle cx="314" cy="308" r="3"/>
-    </g>
+      <!-- upper lip edge + philtrum -->
+      <path d="M250,258 L250,268 M250,268 Q230,262 206,276 M250,268 Q270,262 294,276"
+            fill="none" stroke="#0d0905" stroke-width="7" stroke-linecap="round"/>
 
-    <!-- ── NOSE ── -->
-    <path class="ln-nose"
-      d="M228,274 C232,263 239,257 250,256 C261,257 268,263 272,274 C276,285 272,297 266,302 C261,305 250,308 250,308 C250,308 239,305 234,302 C228,297 224,285 228,274 Z"
-      fill="url(#lf-nose)"/>
-    <ellipse cx="239" cy="280" rx="8.5" ry="7" fill="#120606" opacity="0.96"/>
-    <ellipse cx="261" cy="280" rx="8.5" ry="7" fill="#120606" opacity="0.96"/>
-    <ellipse cx="242" cy="271" rx="5.5" ry="3.5" fill="rgba(255,220,200,0.26)" transform="rotate(-10,242,271)"/>
+      <!-- upper fangs (hang from the upper lip) -->
+      <g class="rl-fangs-u">
+        <path d="M207,275 C204,296 206,312 213,322 C220,310 221,292 219,276 Z" fill="#efe8d4" filter="url(#rl-soft)"/>
+        <path d="M293,275 C296,296 294,312 287,322 C280,310 279,292 281,276 Z" fill="#efe8d4" filter="url(#rl-soft)"/>
+        <path d="M231,273 L233,292 C233,296 236,298 239,297 C242,296 243,293 242,290 L238,273 Z" fill="#e4dcc4" filter="url(#rl-soft)"/>
+        <path d="M269,273 L267,292 C267,296 264,298 261,297 C258,296 257,293 258,290 L262,273 Z" fill="#e4dcc4" filter="url(#rl-soft)"/>
+      </g>
 
-    <!-- ── PHILTRUM ── -->
-    <line x1="250" y1="308" x2="250" y2="325" stroke="#8a4426" stroke-width="3.2" stroke-linecap="round" opacity="0.58"/>
-
-    <!-- ── UPPER LIP ── -->
-    <path d="M208,325 C224,313 238,308 250,309 C262,308 276,313 292,325"
-          fill="none" stroke="#7e4222" stroke-width="4.8" stroke-linecap="round" opacity="0.68"/>
-
-    <!-- ── JAW (outer) ── -->
-    <path class="ln-jaw"
-      d="M207,332 C218,320 233,313 250,313 C267,313 282,320 293,332 L302,358 C299,384 289,408 274,418 C267,424 250,428 250,428 C250,428 233,424 226,418 C211,408 201,384 198,358 Z"
-      fill="#2e1408"/>
-
-    <!-- Mouth interior -->
-    <path
-      d="M213,339 C224,327 236,321 250,321 C264,321 276,327 287,339 L295,362 C292,385 283,406 268,415 C263,418 250,422 250,422 C250,422 237,418 232,415 C217,406 208,385 205,362 Z"
-      fill="url(#lf-mouth)"/>
-
-    <!-- Palate ridge -->
-    <path d="M220,341 C228,333 238,328 250,328 C262,328 272,333 280,341"
-          fill="none" stroke="#601e1e" stroke-width="2" opacity="0.52"/>
-
-    <!-- ── UPPER TEETH ── -->
-    <path class="ln-tooth" d="M213,335 L209,372 C209,377 212.5,380 217,380 C221.5,380 225,377 225,372 L221,335 Z" fill="#f6f0e4" filter="url(#lf-soft)"/>
-    <line x1="215" y1="337" x2="213" y2="364" stroke="#d8d0bc" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
-    <path class="ln-tooth" d="M226,333 L225,351 C225,354 226.5,355.5 228.5,355.5 C230.5,355.5 232,354 232,351 L230,333 Z" fill="#eeead8" filter="url(#lf-soft)"/>
-    <path class="ln-tooth" d="M274,333 L276,351 C276,354 274.5,355.5 272.5,355.5 C270.5,355.5 269,354 269,351 L271,333 Z" fill="#eeead8" filter="url(#lf-soft)"/>
-    <path class="ln-tooth" d="M287,335 L291,372 C291,377 287.5,380 283,380 C278.5,380 275,377 275,372 L279,335 Z" fill="#f6f0e4" filter="url(#lf-soft)"/>
-    <line x1="285" y1="337" x2="287" y2="364" stroke="#d8d0bc" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
-
-    <!-- ── TONGUE ── -->
-    <path class="ln-tongue"
-      d="M227,378 C232,360 239,350 250,350 C261,350 268,360 273,378 C279,398 273,418 265,424 C260,427 250,429 250,429 C250,429 240,427 235,424 C227,418 221,398 227,378 Z"
-      fill="url(#lf-tongue)"/>
-    <line x1="250" y1="354" x2="250" y2="422" stroke="#a02e3c" stroke-width="3" stroke-linecap="round" opacity="0.48"/>
-    <ellipse cx="242" cy="364" rx="10" ry="5.5" fill="rgba(255,190,205,0.22)" transform="rotate(-8,242,364)"/>
-
-    <!-- ── LOWER TEETH ── -->
-    <path class="ln-tooth" d="M228,400 L225,376 C225,374 226.5,373 228.5,373 C230.5,373 232,374 232,376 L230,400 Z" fill="#ece6d8" opacity="0.88" filter="url(#lf-soft)"/>
-    <path class="ln-tooth" d="M272,400 L275,376 C275,374 273.5,373 271.5,373 C269.5,373 268,374 268,376 L270,400 Z" fill="#ece6d8" opacity="0.88" filter="url(#lf-soft)"/>
-
-    <!-- ── WHISKERS ── -->
-    <g class="ln-whiskers" stroke="rgba(238,228,202,0.74)" stroke-width="1.6" stroke-linecap="round" fill="none">
-      <line x1="206" y1="286" x2="118" y2="274"/>
-      <line x1="205" y1="297" x2="116" y2="297"/>
-      <line x1="207" y1="308" x2="120" y2="320"/>
-      <line x1="196" y1="277" x2="116" y2="262"/>
-      <line x1="294" y1="286" x2="382" y2="274"/>
-      <line x1="295" y1="297" x2="384" y2="297"/>
-      <line x1="293" y1="308" x2="380" y2="320"/>
-      <line x1="304" y1="277" x2="384" y2="262"/>
+      <!-- whiskers -->
+      <g class="rl-whiskers" stroke="rgba(220,205,170,0.5)" stroke-width="2" stroke-linecap="round" fill="none">
+        <path d="M205,244 Q160,236 122,242"/>
+        <path d="M204,256 Q158,256 120,266"/>
+        <path d="M207,268 Q166,274 132,288"/>
+        <path d="M295,244 Q340,236 378,242"/>
+        <path d="M296,256 Q342,256 380,266"/>
+        <path d="M293,268 Q334,274 368,288"/>
+      </g>
     </g>
   </svg>
 
@@ -301,34 +218,24 @@
   <!-- NAVBAR -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <a href="index.html" class="nav-logo" aria-label="Leone Nero home">
-      <svg class="nav-logo-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g fill="#c9a84c" opacity="0.85">
-          <polygon points="40,4  36,20 40,17 44,20"/>
-          <polygon points="58,8  50,22 53,19 56,22"/>
-          <polygon points="71,21 58,30 60,27 63,30"/>
-          <polygon points="76,38 61,40 63,43 60,46"/>
-          <polygon points="71,56 59,50 60,54 57,57"/>
-          <polygon points="57,68 50,55 53,58 50,61"/>
-          <polygon points="40,72 36,56 40,59 44,56"/>
-          <polygon points="23,68 30,55 27,58 30,61"/>
-          <polygon points="9,56  21,50 20,54 17,57"/>
-          <polygon points="4,38  19,40 17,43 20,46"/>
-          <polygon points="9,21  22,30 20,27 17,30"/>
-          <polygon points="22,8  30,22 27,19 24,22"/>
-        </g>
-        <circle cx="40" cy="40" r="26" fill="#1a1005"/>
-        <ellipse cx="40" cy="42" rx="20" ry="22" fill="#231506"/>
-        <ellipse cx="33" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
-        <ellipse cx="47" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
-        <ellipse cx="33" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
-        <ellipse cx="47" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
-        <circle  cx="32" cy="36" r="1"   fill="rgba(255,255,255,0.5)"/>
-        <circle  cx="46" cy="36" r="1"   fill="rgba(255,255,255,0.5)"/>
-        <path d="M37,47 C38,44 42,44 43,47 C44,50 42,52 40,52 C38,52 36,50 37,47Z" fill="#1e0800"/>
-        <path d="M32,54 C35,60 45,60 48,54 L46,52 C43,57 37,57 34,52 Z" fill="#0a0000"/>
-        <path d="M35,53 L36,58 L38,53" fill="rgba(235,230,215,0.9)"/>
-        <path d="M42,53 L43,58 L45,53" fill="rgba(235,230,215,0.9)"/>
-        <circle cx="40" cy="40" r="26" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.3"/>
+      <svg class="nav-logo-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="100" cy="100" r="97" fill="#f3efe4"/>
+        <circle cx="100" cy="100" r="94" fill="none" stroke="#c9a84c" stroke-width="3.5" opacity="0.9"/>
+        <path d="M100,28 Q113.5,8.84 129.75,9.78 Q123.8,44.4 127.55,33.48 Q142.87,28.44 156.14,34.85 Q143.27,57.74 150.91,49.09 Q174,45.09 184.83,57.24 Q156.15,77.52 166.52,72.45 Q180.92,79.71 185.76,93.63 Q160.48,100.71 172,100 Q191.16,113.5 190.22,129.75 Q155.6,123.8 166.52,127.55 Q171.56,142.87 165.15,156.14 Q142.26,143.27 150.91,150.91 Q154.91,174 142.76,184.83 Q122.48,156.15 127.55,166.52 Q120.29,180.92 106.37,185.76 Q99.29,160.48 100,172 Q86.5,191.16 70.25,190.22 Q76.2,155.6 72.45,166.52 Q57.13,171.56 43.86,165.15 Q56.73,142.26 49.09,150.91 Q26,154.91 15.17,142.76 Q43.85,122.48 33.48,127.55 Q19.08,120.29 14.24,106.37 Q39.52,99.29 28,100 Q8.84,86.5 9.78,70.25 Q44.4,76.2 33.48,72.45 Q28.44,57.13 34.85,43.86 Q57.74,56.73 49.09,49.09 Q45.09,26 57.24,15.17 Q77.52,43.85 72.45,33.48 Q79.71,19.08 93.63,14.24 Q100.71,39.52 100,28 Z" fill="#1f1f1f"/>
+        <path d="M100,40 C117,40 129,46 133,57 C139,64 140,74 136,83 L142,88 L134,91 L139,100 L129,99 C126,112 115,121 100,123 C85,121 74,112 71,99 L61,100 L66,91 L58,88 L64,83 C60,74 61,64 67,57 C71,46 83,40 100,40 Z" fill="#f3efe4"/>
+        <path d="M60,44 Q54,26 71,21 Q82,27 83,42 Q71,36 60,44Z" fill="#1f1f1f"/>
+        <path d="M140,44 Q146,26 129,21 Q118,27 117,42 Q129,36 140,44Z" fill="#1f1f1f"/>
+        <path d="M65,39 Q63,29 72,26 Q78,31 79,39 Q72,35 65,39Z" fill="#f3efe4"/>
+        <path d="M135,39 Q137,29 128,26 Q122,31 121,39 Q128,35 135,39Z" fill="#f3efe4"/>
+        <path d="M68,67 Q78,56 93,60 L98,69 Q84,62 72,71 Z" fill="#1f1f1f"/>
+        <path d="M132,67 Q122,56 107,60 L102,69 Q116,62 128,71 Z" fill="#1f1f1f"/>
+        <path d="M74,72 Q86,66 97,79 Q83,79 74,72 Z" fill="#1f1f1f"/>
+        <path d="M126,72 Q114,66 103,79 Q117,79 126,72 Z" fill="#1f1f1f"/>
+        <circle cx="83" cy="72.5" r="1.6" fill="#f3efe4"/>
+        <circle cx="117" cy="72.5" r="1.6" fill="#f3efe4"/>
+        <path d="M89,90 Q100,84 111,90 Q113,99 100,105 Q87,99 89,90 Z" fill="#1f1f1f"/>
+        <path d="M100,105 L100,110 M100,110 Q91,116 82,111 M100,110 Q109,116 118,111" fill="none" stroke="#1f1f1f" stroke-width="3.6" stroke-linecap="round"/>
+        <path d="M93,119 Q100,123 107,119 Q104,116 100,116 Q96,116 93,119Z" fill="#1f1f1f" opacity="0.9"/>
       </svg>
       <div class="nav-logo-text">
         <span class="nav-logo-name">LEONE NERO</span>
@@ -1074,25 +981,25 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="display:inline-flex;" aria-label="Leone Nero home">
-          <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <g fill="#c9a84c" opacity="0.75">
-              <polygon points="40,4  36,20 40,17 44,20"/>
-              <polygon points="58,8  50,22 53,19 56,22"/>
-              <polygon points="71,21 58,30 60,27 63,30"/>
-              <polygon points="76,38 61,40 63,43 60,46"/>
-              <polygon points="71,56 59,50 60,54 57,57"/>
-              <polygon points="40,72 36,56 40,59 44,56"/>
-              <polygon points="9,21  22,30 20,27 17,30"/>
-              <polygon points="4,38  19,40 17,43 20,46"/>
-              <polygon points="9,56  21,50 20,54 17,57"/>
-            </g>
-            <circle cx="40" cy="40" r="26" fill="#1a1005"/>
-            <ellipse cx="40" cy="42" rx="20" ry="22" fill="#231506"/>
-            <ellipse cx="33" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
-            <ellipse cx="47" cy="37" rx="4.5" ry="3.5" fill="#c9a84c"/>
-            <ellipse cx="33" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
-            <ellipse cx="47" cy="37" rx="2.2" ry="3.0" fill="#080400"/>
-          </svg>
+          <svg width="40" height="40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="100" cy="100" r="97" fill="#f3efe4"/>
+        <circle cx="100" cy="100" r="94" fill="none" stroke="#c9a84c" stroke-width="3.5" opacity="0.9"/>
+        <path d="M100,28 Q113.5,8.84 129.75,9.78 Q123.8,44.4 127.55,33.48 Q142.87,28.44 156.14,34.85 Q143.27,57.74 150.91,49.09 Q174,45.09 184.83,57.24 Q156.15,77.52 166.52,72.45 Q180.92,79.71 185.76,93.63 Q160.48,100.71 172,100 Q191.16,113.5 190.22,129.75 Q155.6,123.8 166.52,127.55 Q171.56,142.87 165.15,156.14 Q142.26,143.27 150.91,150.91 Q154.91,174 142.76,184.83 Q122.48,156.15 127.55,166.52 Q120.29,180.92 106.37,185.76 Q99.29,160.48 100,172 Q86.5,191.16 70.25,190.22 Q76.2,155.6 72.45,166.52 Q57.13,171.56 43.86,165.15 Q56.73,142.26 49.09,150.91 Q26,154.91 15.17,142.76 Q43.85,122.48 33.48,127.55 Q19.08,120.29 14.24,106.37 Q39.52,99.29 28,100 Q8.84,86.5 9.78,70.25 Q44.4,76.2 33.48,72.45 Q28.44,57.13 34.85,43.86 Q57.74,56.73 49.09,49.09 Q45.09,26 57.24,15.17 Q77.52,43.85 72.45,33.48 Q79.71,19.08 93.63,14.24 Q100.71,39.52 100,28 Z" fill="#1f1f1f"/>
+        <path d="M100,40 C117,40 129,46 133,57 C139,64 140,74 136,83 L142,88 L134,91 L139,100 L129,99 C126,112 115,121 100,123 C85,121 74,112 71,99 L61,100 L66,91 L58,88 L64,83 C60,74 61,64 67,57 C71,46 83,40 100,40 Z" fill="#f3efe4"/>
+        <path d="M60,44 Q54,26 71,21 Q82,27 83,42 Q71,36 60,44Z" fill="#1f1f1f"/>
+        <path d="M140,44 Q146,26 129,21 Q118,27 117,42 Q129,36 140,44Z" fill="#1f1f1f"/>
+        <path d="M65,39 Q63,29 72,26 Q78,31 79,39 Q72,35 65,39Z" fill="#f3efe4"/>
+        <path d="M135,39 Q137,29 128,26 Q122,31 121,39 Q128,35 135,39Z" fill="#f3efe4"/>
+        <path d="M68,67 Q78,56 93,60 L98,69 Q84,62 72,71 Z" fill="#1f1f1f"/>
+        <path d="M132,67 Q122,56 107,60 L102,69 Q116,62 128,71 Z" fill="#1f1f1f"/>
+        <path d="M74,72 Q86,66 97,79 Q83,79 74,72 Z" fill="#1f1f1f"/>
+        <path d="M126,72 Q114,66 103,79 Q117,79 126,72 Z" fill="#1f1f1f"/>
+        <circle cx="83" cy="72.5" r="1.6" fill="#f3efe4"/>
+        <circle cx="117" cy="72.5" r="1.6" fill="#f3efe4"/>
+        <path d="M89,90 Q100,84 111,90 Q113,99 100,105 Q87,99 89,90 Z" fill="#1f1f1f"/>
+        <path d="M100,105 L100,110 M100,110 Q91,116 82,111 M100,110 Q109,116 118,111" fill="none" stroke="#1f1f1f" stroke-width="3.6" stroke-linecap="round"/>
+        <path d="M93,119 Q100,123 107,119 Q104,116 100,116 Q96,116 93,119Z" fill="#1f1f1f" opacity="0.9"/>
+      </svg>
           <div class="nav-logo-text" style="margin-left:12px;">
             <span class="nav-logo-name">LEONE NERO</span>
             <span class="nav-logo-srl">S.r.l.</span>

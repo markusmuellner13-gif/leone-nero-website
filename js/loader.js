@@ -1,5 +1,6 @@
 /*!
  * Leone Nero S.r.l. — Loader (GSAP timeline)
+ * A black lion emerges from darkness, roars, and fades into the site.
  * GPU-composited, frame-rate independent — same speed on phone and desktop.
  */
 (function () {
@@ -28,106 +29,97 @@
   }
 
   /* ─── Initial states (everything hidden until GSAP reveals it) ─── */
-  gsap.set('.ln-aura',   { opacity: 0, scale: 0, svgOrigin: '250 252' });
-  gsap.set('.ln-md',     { opacity: 0, scale: 0, svgOrigin: '250 250' });
-  gsap.set('.ln-spikes use', { opacity: 0, scale: 0, svgOrigin: '250 250' });
-  gsap.set('.ln-mb',     { opacity: 0, scale: 0, svgOrigin: '250 250' });
-  gsap.set('.ln-mm',     { opacity: 0, scale: 0, svgOrigin: '250 248' });
-  gsap.set('.ln-mi',     { opacity: 0, scale: 0, svgOrigin: '250 246' });
-  gsap.set('.ln-face',   { opacity: 0, scale: 0.5, svgOrigin: '250 280' });
-  gsap.set('.ln-eye-l',  { opacity: 0, scale: 0, svgOrigin: '195 228' });
-  gsap.set('.ln-eye-r',  { opacity: 0, scale: 0, svgOrigin: '305 228' });
-  gsap.set('.ln-nose',   { opacity: 0, y: -12 });
-  gsap.set('.ln-jaw',    { opacity: 0, scaleY: 0, svgOrigin: '250 332' });
-  gsap.set('.ln-tooth',  { opacity: 0, y: -10 });
-  gsap.set('.ln-tongue', { opacity: 0 });
-  gsap.set('.ln-whiskers line', { opacity: 0, scaleX: 0, svgOrigin: '206 297' });
+  gsap.set('.rl-aura',   { opacity: 0, scale: 0.6, svgOrigin: '250 250' });
+  gsap.set(['.rl-mane-o', '.rl-mane-m', '.rl-mane-i'], { opacity: 0, scale: 0.88, svgOrigin: '250 250' });
+  gsap.set(['.rl-face', '.rl-nose', '.rl-brow'], { opacity: 0 });
+  gsap.set('.rl-mouth',    { opacity: 0, scaleY: 0.1, svgOrigin: '250 262' });
+  gsap.set('.rl-fangs-u',  { opacity: 0 });
+  gsap.set('.rl-eyes',     { opacity: 0 });
+  gsap.set('.rl-whiskers', { opacity: 0 });
+  gsap.set('.rl-fur',      { opacity: 0 });
+  gsap.set('.rl-wrinkles', { opacity: 0 });
+  gsap.set('.rl-wave',     { opacity: 0, scale: 0.3, svgOrigin: '250 290' });
   gsap.set('.loader-brand', { opacity: 0, y: 16 });
 
   /* ─── Main timeline ─── */
   var tl = gsap.timeline();
 
   tl
-    /* 1. Aura & mane outer dark */
-    .to('.ln-aura', { opacity: 1, scale: 1, duration: 0.7, ease: 'power2.out' }, 0.1)
-    .to('.ln-md',   { opacity: 1, scale: 1, duration: 0.65, ease: 'back.out(1.4)' }, 0.18)
+    /* 1. Aura breathes into the darkness */
+    .to('.rl-aura', { opacity: 1, scale: 1, duration: 0.9, ease: 'power2.out' }, 0.1)
 
-    /* 2. Spikes fan outward one by one */
-    .to('.ln-spikes use', {
-      opacity: 1, scale: 1,
-      duration: 0.45,
-      stagger: { amount: 0.5, from: 'start' },
-      ease: 'back.out(2.4)'
-    }, 0.28)
+    /* 2. Two glowing eyes open first — alone in the dark */
+    .to('.rl-eyes', { opacity: 1, duration: 0.7, ease: 'power2.inOut' }, 0.3)
 
-    /* 3. Mane layers build inward */
-    .to('.ln-mb', { opacity: 1, scale: 1, duration: 0.38, ease: 'power2.out' }, 0.52)
-    .to('.ln-mm', { opacity: 1, scale: 1, duration: 0.32, ease: 'power2.out' }, 0.64)
-    .to('.ln-mi', { opacity: 1, scale: 1, duration: 0.28, ease: 'power2.out' }, 0.75)
+    /* 3. The mane emerges from the shadow, layer by layer */
+    .to('.rl-mane-o', { opacity: 1, scale: 1, duration: 0.55, ease: 'back.out(1.4)' }, 0.85)
+    .to('.rl-mane-m', { opacity: 1, scale: 1, duration: 0.5,  ease: 'back.out(1.4)' }, 1.0)
+    .to('.rl-mane-i', { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.4)' }, 1.12)
 
-    /* 4. Face snaps in */
-    .to('.ln-face', { opacity: 1, scale: 1, duration: 0.42, ease: 'back.out(1.7)' }, 0.84)
+    /* 4. The face resolves */
+    .to('.rl-face',  { opacity: 1, duration: 0.45, ease: 'power2.out' }, 1.3)
+    .to('.rl-mouth', { opacity: 1, duration: 0.3 }, 1.35)
+    .to(['.rl-brow', '.rl-nose'], { opacity: 1, duration: 0.4, ease: 'power2.out' }, 1.45)
 
-    /* 5. Eyes open (left then right) */
-    .to('.ln-eye-l', { opacity: 1, scale: 1, duration: 0.3, ease: 'back.out(2.8)' }, 1.10)
-    .to('.ln-eye-r', { opacity: 1, scale: 1, duration: 0.3, ease: 'back.out(2.8)' }, 1.20)
+    /* 5. Whiskers + fur sheen */
+    .to('.rl-whiskers', { opacity: 1, duration: 0.35 }, 1.62)
+    .to('.rl-fur',      { opacity: 0.16, duration: 0.35 }, 1.62)
 
-    /* 6. Nose appears */
-    .to('.ln-nose', { opacity: 1, y: 0, duration: 0.24, ease: 'power2.out' }, 1.34)
+    /* 6. The inhale — head draws back, eyes narrow */
+    .to('.loader-lion', { scale: 0.955, duration: 0.42, ease: 'power2.inOut', transformOrigin: 'center' }, 1.95)
+    .to('.rl-eyes',     { scaleY: 0.8, svgOrigin: '250 184', duration: 0.42, ease: 'power2.inOut' }, 1.95)
 
-    /* 7. Jaw drops */
-    .to('.ln-jaw', { opacity: 1, scaleY: 1, duration: 0.36, ease: 'back.out(1.3)' }, 1.42)
-
-    /* 8. Teeth drop in */
-    .to('.ln-tooth', { opacity: 1, y: 0, duration: 0.2, stagger: 0.04, ease: 'power3.out' }, 1.52)
-
-    /* 9. Tongue */
-    .to('.ln-tongue', { opacity: 1, duration: 0.18 }, 1.66)
-
-    /* 10. Whiskers shoot out */
-    .to('.ln-whiskers line', {
-      opacity: 1, scaleX: 1,
-      duration: 0.28,
-      stagger: 0.04,
-      ease: 'power3.out'
-    }, 1.72)
-
-    /* 11. ROAR — gold burst then settle */
+    /* 7. THE ROAR — jaw drops, gold burst, shockwaves, screen shake */
+    .to('.rl-mouth',    { scaleY: 1, duration: 0.5, ease: 'back.out(1.6)' }, 2.4)
+    .to('.rl-fangs-u',  { opacity: 1, duration: 0.15 }, 2.4)
+    .to('.rl-wrinkles', { opacity: 0.85, duration: 0.3 }, 2.42)
+    .to('.rl-eyes',     { scaleY: 0.62, duration: 0.3, ease: 'power2.out' }, 2.4)
+    .to('.rl-brow',     { y: 7, duration: 0.3, ease: 'power2.out' }, 2.4)
     .to('.loader-lion', {
-      filter: 'drop-shadow(0 0 72px rgba(255,208,0,0.98)) drop-shadow(0 0 36px rgba(201,168,76,1))',
-      scale: 1.13,
-      duration: 0.26,
-      ease: 'power3.in',
-      transformOrigin: 'center'
-    }, 2.02)
+      scale: 1.15,
+      filter: 'drop-shadow(0 0 44px rgba(255,208,0,0.62)) drop-shadow(0 0 20px rgba(201,168,76,0.7))',
+      duration: 0.45, ease: 'power3.out', transformOrigin: 'center'
+    }, 2.4)
+    .to('#loader', {
+      keyframes: [
+        { x: -8, y: 5 }, { x: 7, y: -6 }, { x: -6, y: -4 }, { x: 5, y: 5 },
+        { x: -4, y: -2 }, { x: 3, y: 2 }, { x: -1, y: -1 }, { x: 0, y: 0 }
+      ],
+      duration: 0.6, ease: 'power1.inOut'
+    }, 2.42)
+    .to('.rl-wave', { opacity: 0.9, duration: 0.06, stagger: 0.16 }, 2.45)
+    .to('.rl-wave', { scale: 5.4, opacity: 0, duration: 1.05, stagger: 0.16, ease: 'power2.out' }, 2.5)
+
+    /* 8. Brand slams in on the roar */
+    .to('.loader-brand', { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.8)' }, 2.58)
+
+    /* 9. Settle — the roar rings out */
     .to('.loader-lion', {
-      filter: 'drop-shadow(0 0 24px rgba(201,168,76,0.55))',
-      scale: 1.0,
-      duration: 0.6,
-      ease: 'elastic.out(1.1, 0.44)',
-      transformOrigin: 'center'
-    }, 2.28)
+      scale: 1.04,
+      filter: 'drop-shadow(0 0 26px rgba(201,168,76,0.55))',
+      duration: 0.8, ease: 'elastic.out(1, 0.5)', transformOrigin: 'center'
+    }, 3.0)
 
-    /* 12. Brand name slides up */
-    .to('.loader-brand', { opacity: 1, y: 0, duration: 0.48, ease: 'power2.out' }, 2.36)
+    /* 10. Mouth eases to a snarl, eyes reopen */
+    .to('.rl-mouth',    { scaleY: 0.5, duration: 0.55, ease: 'power2.inOut' }, 3.65)
+    .to('.rl-wrinkles', { opacity: 0.25, duration: 0.5 }, 3.65)
+    .to('.rl-eyes',     { scaleY: 1, duration: 0.5, ease: 'power2.out' }, 3.65)
+    .to('.rl-brow',     { y: 0, duration: 0.5, ease: 'power2.out' }, 3.65)
 
-    /* 13. Eye glow pulse (runs indefinitely until fadeout) */
-    .to(['.ln-eye-l', '.ln-eye-r'], {
-      filter: 'drop-shadow(0 0 12px rgba(255,220,0,0.92)) drop-shadow(0 0 5px rgba(255,200,0,0.72))',
-      duration: 1.3,
-      yoyo: true,
-      repeat: -1,
-      ease: 'sine.inOut'
-    }, 2.5);
+    /* 11. Eye glow pulse until fade-out */
+    .to('.rl-eyes', {
+      filter: 'drop-shadow(0 0 14px rgba(255,220,0,0.9))',
+      duration: 1.1, yoyo: true, repeat: -1, ease: 'sine.inOut'
+    }, 4.2);
 
-  /* ─── Fade out + reveal site at 4.6 s ─── */
+  /* ─── Fade out + reveal site at 4.7 s ─── */
   setTimeout(function () {
     gsap.to(loader, {
       opacity: 0,
-      duration: 0.88,
+      duration: 0.85,
       ease: 'power2.inOut',
       onComplete: function () { loader.style.display = 'none'; }
     });
     document.body.classList.add('loaded');
-  }, 4600);
+  }, 4700);
 })();
