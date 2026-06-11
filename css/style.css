@@ -125,7 +125,11 @@ h1,h2,h3,h4,h5 { font-family:'Playfair Display',Georgia,serif; line-height:1.15;
 
 /* Logo */
 .nav-logo { display:flex; align-items:center; gap:12px; flex-shrink:0; }
-.nav-logo-icon { width:42px; height:42px; flex-shrink:0; }
+.nav-logo-icon {
+  width:42px; height:42px; flex-shrink:0;
+  background:#f3efe4; border-radius:50%;
+  padding:5px; box-sizing:border-box; object-fit:contain;
+}
 .nav-logo-text { display:flex; flex-direction:column; line-height:1; }
 .nav-logo-name {
   font-family:'Playfair Display',serif;
@@ -492,7 +496,12 @@ h1,h2,h3,h4,h5 { font-family:'Playfair Display',Georgia,serif; line-height:1.15;
   border:1px dashed rgba(201,168,76,0.15);
   animation:spinSlow 12s linear infinite reverse;
 }
-.about-lion-svg { width:200px; height:200px; }
+.about-lion-svg {
+  width:200px; height:200px;
+  background:#f3efe4; border-radius:50%;
+  border:3px solid rgba(201,168,76,0.65);
+  padding:22px; box-sizing:border-box; object-fit:contain;
+}
 
 /* ================================================================
    TEAM / QUOTE
@@ -618,6 +627,9 @@ footer {
   flex-wrap:wrap; gap:14px;
 }
 .footer-copy { font-size:0.78rem; color:var(--text-muted); }
+.footer-attrib { font-size:0.66rem; color:var(--text-muted); opacity:0.75; }
+.footer-attrib a { color:inherit; text-decoration:underline; transition:color var(--ease); }
+.footer-attrib a:hover { color:var(--gold); }
 .footer-legal { display:flex; gap:22px; }
 .footer-legal a { font-size:0.78rem; color:var(--text-muted); transition:color var(--ease); }
 .footer-legal a:hover { color:var(--gold); }
