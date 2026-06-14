@@ -33,165 +33,12 @@
 <!-- LOADER -->
 <div id="loader" role="status" aria-label="Loading Leone Nero">
 
-  <svg class="loader-lion" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-      <radialGradient id="rl-aura" cx="50%" cy="50%" r="50%">
-        <stop offset="0%"  stop-color="#c9a84c" stop-opacity="0.30"/>
-        <stop offset="70%" stop-color="#c9a84c" stop-opacity="0.07"/>
-        <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
-      </radialGradient>
-      <radialGradient id="rl-mane-o" cx="50%" cy="42%" r="58%">
-        <stop offset="0%"   stop-color="#16110a"/>
-        <stop offset="70%"  stop-color="#0c0906"/>
-        <stop offset="100%" stop-color="#060404"/>
-      </radialGradient>
-      <radialGradient id="rl-mane-m" cx="50%" cy="40%" r="58%">
-        <stop offset="0%"   stop-color="#241a0e"/>
-        <stop offset="70%"  stop-color="#150e07"/>
-        <stop offset="100%" stop-color="#0a0705"/>
-      </radialGradient>
-      <radialGradient id="rl-mane-i" cx="50%" cy="38%" r="58%">
-        <stop offset="0%"   stop-color="#352513"/>
-        <stop offset="70%"  stop-color="#1e1409"/>
-        <stop offset="100%" stop-color="#100a05"/>
-      </radialGradient>
-      <radialGradient id="rl-face" cx="50%" cy="30%" r="70%">
-        <stop offset="0%"   stop-color="#4a3a24"/>
-        <stop offset="45%"  stop-color="#322514"/>
-        <stop offset="100%" stop-color="#17100a"/>
-      </radialGradient>
-      <radialGradient id="rl-jaw" cx="50%" cy="20%" r="80%">
-        <stop offset="0%"   stop-color="#33271a"/>
-        <stop offset="100%" stop-color="#120c08"/>
-      </radialGradient>
-      <radialGradient id="rl-eye" cx="35%" cy="30%" r="75%">
-        <stop offset="0%"   stop-color="#ffe97a"/>
-        <stop offset="35%"  stop-color="#f2c032"/>
-        <stop offset="75%"  stop-color="#b67a1a"/>
-        <stop offset="100%" stop-color="#6e4410"/>
-      </radialGradient>
-      <radialGradient id="rl-mouth" cx="50%" cy="18%" r="80%">
-        <stop offset="0%"   stop-color="#6e1d1d"/>
-        <stop offset="55%"  stop-color="#3a0e0e"/>
-        <stop offset="100%" stop-color="#1c0505"/>
-      </radialGradient>
-      <radialGradient id="rl-tongue" cx="50%" cy="25%" r="75%">
-        <stop offset="0%"   stop-color="#d9606e"/>
-        <stop offset="60%"  stop-color="#a82e40"/>
-        <stop offset="100%" stop-color="#6e1626"/>
-      </radialGradient>
-      <filter id="rl-glow" x="-80%" y="-80%" width="260%" height="260%">
-        <feGaussianBlur stdDeviation="5" result="b"/>
-        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-      </filter>
-      <filter id="rl-soft" x="-30%" y="-30%" width="160%" height="160%">
-        <feGaussianBlur stdDeviation="1.4"/>
-      </filter>
-    </defs>
-
-    <!-- aura -->
-    <circle class="rl-aura" cx="250" cy="250" r="245" fill="url(#rl-aura)"/>
-
-    <!-- shockwave rings (hidden until the roar) -->
-    <g class="rl-waves" fill="none" stroke="#c9a84c">
-      <circle class="rl-wave" cx="250" cy="290" r="46" stroke-width="5" opacity="0"/>
-      <circle class="rl-wave" cx="250" cy="290" r="46" stroke-width="3.5" opacity="0"/>
-      <circle class="rl-wave" cx="250" cy="290" r="46" stroke-width="2.5" opacity="0"/>
-    </g>
-
-    <g class="rl-lion">
-      <!-- mane -->
-      <path class="rl-mane-o" d="M250,70 Q283.82,21.63 324.53,23.97 Q309.5,111 318.88,83.7 Q357.18,71.1 390.34,87.12 Q358.17,144.35 377.28,122.72 Q435.4,112.44 462.53,142.88 Q390.36,193.79 416.3,181.12 Q452.29,199.28 464.41,234.07 Q401.19,251.78 430,250 Q478.37,283.82 476.03,324.53 Q389,309.5 416.3,318.88 Q428.9,357.18 412.88,390.34 Q355.65,358.17 377.28,377.28 Q387.56,435.4 357.12,462.53 Q306.21,390.36 318.88,416.3 Q300.72,452.29 265.93,464.41 Q248.22,401.19 250,430 Q216.18,478.37 175.47,476.03 Q190.5,389 181.12,416.3 Q142.82,428.9 109.66,412.88 Q141.83,355.65 122.72,377.28 Q64.6,387.56 37.47,357.12 Q109.64,306.21 83.7,318.88 Q47.71,300.72 35.59,265.93 Q98.81,248.22 70,250 Q21.63,216.18 23.97,175.47 Q111,190.5 83.7,181.12 Q71.1,142.82 87.12,109.66 Q144.35,141.83 122.72,122.72 Q112.44,64.6 142.88,37.47 Q193.79,109.64 181.12,83.7 Q199.28,47.71 234.07,35.59 Q251.78,98.81 250,70 Z" fill="url(#rl-mane-o)"/>
-      <path class="rl-mane-m" d="M250,102 Q264.68,60.45 276.79,55.84 Q281.73,129.8 314.21,116.66 Q338.65,97.33 350.64,98.36 Q330.74,155.47 365.71,157.72 Q407.35,143.29 418.51,149.89 Q363.76,199.86 394.29,217.07 Q424.63,224.12 431.31,234.14 Q374.25,254.18 394.29,282.93 Q431.53,306.49 433.33,319.33 Q360.13,307.68 365.71,342.28 Q379.11,370.4 375.45,381.86 Q324.2,349.75 314.21,383.34 Q319.02,427.15 310.1,436.56 Q273.57,372.07 250,398 Q236.37,426.01 225.12,430.29 Q218.27,370.2 185.79,383.34 Q154.53,414.41 141.62,413.31 Q169.26,344.53 134.29,342.28 Q103.89,349.08 93.53,342.96 Q136.24,300.14 105.71,282.93 Q61.93,277.87 54.75,267.08 Q125.75,245.82 105.71,217.07 Q81.43,197.54 79.77,185.63 Q139.87,192.32 134.29,157.72 Q110.96,120.34 114.91,107.99 Q175.8,150.25 185.79,116.66 Q185.91,85.5 194.19,76.77 Q226.43,127.93 250,102 Z"   fill="url(#rl-mane-m)"/>
-      <path class="rl-mane-i" d="M250,132 Q276.02,100.93 305.91,104.36 Q296.38,162.4 309,147.81 Q340.84,141.35 363.46,158.12 Q333.97,197.33 352.19,191 Q392.1,198 404.08,225.6 Q349.05,246.37 368,250 Q389.51,274.35 386.3,302.32 Q337.6,296.38 352.19,309 Q366.09,347.06 348.17,371.23 Q302.67,333.97 309,352.19 Q298.67,382.99 272.84,394.2 Q253.63,349.05 250,368 Q223.98,399.07 194.09,395.64 Q203.62,337.6 191,352.19 Q159.16,358.65 136.54,341.88 Q166.03,302.67 147.81,309 Q107.9,302 95.92,274.4 Q150.95,253.63 132,250 Q110.49,225.65 113.7,197.68 Q162.4,203.62 147.81,191 Q133.91,152.94 151.83,128.77 Q197.33,166.03 191,147.81 Q201.33,117.01 227.16,105.8 Q246.37,150.95 250,132 Z" fill="url(#rl-mane-i)"/>
-
-      <!-- mane fur sheen -->
-      <g class="rl-fur" opacity="0.16" stroke="#c9a84c" stroke-width="2" fill="none" stroke-linecap="round">
-        <path d="M250,62 C247,86 245,108 247,128"/>
-        <path d="M306,72 C299,94 292,114 290,132"/>
-        <path d="M352,100 C341,118 331,136 327,152"/>
-        <path d="M194,72 C201,94 208,114 210,132"/>
-        <path d="M148,100 C159,118 169,136 173,152"/>
-        <path d="M385,146 C371,160 359,176 353,190"/>
-        <path d="M115,146 C129,160 141,176 147,190"/>
-      </g>
-
-      <!-- ears -->
-      <path d="M150,110 Q135,65 177,53 Q205,68 207,105 Q177,90 150,110Z" fill="#17110a"/>
-      <path d="M350,110 Q365,65 323,53 Q295,68 293,105 Q323,90 350,110Z" fill="#17110a"/>
-      <path d="M163,98 Q158,73 180,65 Q195,78 197,98 Q180,88 163,98Z" fill="#0a0705"/>
-      <path d="M337,98 Q342,73 320,65 Q305,78 303,98 Q320,88 337,98Z" fill="#0a0705"/>
-
-      <!-- MOUTH GROUP (cavity + tongue + lower jaw) — GSAP scales this open -->
-      <g class="rl-mouth">
-        <path d="M200,270 Q250,250 300,270 Q306,320 250,355 Q194,320 200,270Z" fill="url(#rl-mouth)"/>
-        <path d="M220,290 Q250,275 280,290 Q285,326 250,341 Q215,326 220,290Z" fill="url(#rl-tongue)"/>
-        <path d="M250,284 L250,338" stroke="#7e1c2e" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
-        <!-- lower jaw + lower fangs -->
-        <path d="M198,330 Q250,316 302,330 Q298,366 250,378 Q202,366 198,330Z" fill="url(#rl-jaw)"/>
-        <path d="M216,334 C217,318 220,308 226,302 C231,310 232,322 230,337 Z" fill="#e8dfc8" filter="url(#rl-soft)"/>
-        <path d="M284,334 C283,318 280,308 274,302 C269,310 268,322 270,337 Z" fill="#e8dfc8" filter="url(#rl-soft)"/>
-      </g>
-
-      <!-- upper face -->
-      <path class="rl-face" d=" M250,100 C 292,100 322,115 332,142 C 347,160 350,185 340,207 L 355,220 L 335,227 L 347,250 L 322,247 C 317,261 308,272 296,279 Q 272,291 250,271 Q 228,291 204,279 C 192,272 183,261 178,247 L 153,250 L 165,227 L 145,220 L 160,207 C 150,185 153,160 168,142 C 178,115 208,100 250,100 Z" fill="url(#rl-face)"/>
-      <!-- forehead highlight -->
-      <ellipse cx="250" cy="150" rx="68" ry="28" fill="#6e5630" opacity="0.18"/>
-
-      <!-- roar wrinkles on the muzzle (revealed during roar) -->
-      <g class="rl-wrinkles" fill="none" stroke="#0d0905" stroke-linecap="round" opacity="0">
-        <path d="M222,196 C232,186 244,182 256,184 C266,186 274,192 278,199" stroke-width="6"/>
-        <path d="M214,210 C226,199 240,194 253,196" stroke-width="4"/>
-        <path d="M286,210 C274,199 260,194 247,196" stroke-width="4"/>
-      </g>
-
-      <!-- brows -->
-      <path class="rl-brow" d="M170,168 Q195,140 232,150 L245,174 Q210,158 180,180 Z" fill="#100b06"/>
-      <path class="rl-brow" d="M330,168 Q305,140 268,150 L255,174 Q290,158 320,180 Z" fill="#100b06"/>
-
-      <!-- eyes -->
-      <g class="rl-eyes">
-        <g class="rl-eye-l" filter="url(#rl-glow)">
-          <path d="M185,180 Q215,165 242,198 Q208,198 191,190 Q185,185 185,180Z" fill="url(#rl-eye)"/>
-          <ellipse cx="213" cy="186" rx="7" ry="11" fill="#0a0500" transform="rotate(-14,213,186)"/>
-          <circle cx="204" cy="179" r="4" fill="rgba(255,255,255,0.85)"/>
-        </g>
-        <g class="rl-eye-r" filter="url(#rl-glow)">
-          <path d="M315,180 Q285,165 258,198 Q292,198 309,190 Q315,185 315,180Z" fill="url(#rl-eye)"/>
-          <ellipse cx="287" cy="186" rx="7" ry="11" fill="#0a0500" transform="rotate(14,287,186)"/>
-          <circle cx="296" cy="179" r="4" fill="rgba(255,255,255,0.85)"/>
-        </g>
-      </g>
-
-      <!-- nose -->
-      <path class="rl-nose" d="M222,222 Q250,206 278,222 Q284,244 250,258 Q216,244 222,222Z" fill="#0c0807"/>
-      <ellipse cx="236" cy="226" rx="7" ry="5" fill="#000" opacity="0.9"/>
-      <ellipse cx="264" cy="226" rx="7" ry="5" fill="#000" opacity="0.9"/>
-      <ellipse cx="240" cy="217" rx="9" ry="4" fill="#3a2a1c" opacity="0.55" transform="rotate(-12,240,217)"/>
-
-      <!-- upper lip edge + philtrum -->
-      <path d="M250,258 L250,268 M250,268 Q230,262 206,276 M250,268 Q270,262 294,276"
-            fill="none" stroke="#0d0905" stroke-width="7" stroke-linecap="round"/>
-
-      <!-- upper fangs (hang from the upper lip) -->
-      <g class="rl-fangs-u">
-        <path d="M207,275 C204,296 206,312 213,322 C220,310 221,292 219,276 Z" fill="#efe8d4" filter="url(#rl-soft)"/>
-        <path d="M293,275 C296,296 294,312 287,322 C280,310 279,292 281,276 Z" fill="#efe8d4" filter="url(#rl-soft)"/>
-        <path d="M231,273 L233,292 C233,296 236,298 239,297 C242,296 243,293 242,290 L238,273 Z" fill="#e4dcc4" filter="url(#rl-soft)"/>
-        <path d="M269,273 L267,292 C267,296 264,298 261,297 C258,296 257,293 258,290 L262,273 Z" fill="#e4dcc4" filter="url(#rl-soft)"/>
-      </g>
-
-      <!-- whiskers -->
-      <g class="rl-whiskers" stroke="rgba(220,205,170,0.5)" stroke-width="2" stroke-linecap="round" fill="none">
-        <path d="M205,244 Q160,236 122,242"/>
-        <path d="M204,256 Q158,256 120,266"/>
-        <path d="M207,268 Q166,274 132,288"/>
-        <path d="M295,244 Q340,236 378,242"/>
-        <path d="M296,256 Q342,256 380,266"/>
-        <path d="M293,268 Q334,274 368,288"/>
-      </g>
-    </g>
-  </svg>
+  <video class="loader-video" id="loader-video"
+         autoplay muted playsinline preload="auto"
+         poster="media/lion-poster.png" aria-hidden="true">
+    <source src="media/lion-roar.mp4" type="video/mp4">
+  </video>
+  <div class="loader-vignette" aria-hidden="true"></div>
 
   <div class="loader-brand" aria-hidden="true">
     <span class="loader-brand-name">LEONE NERO</span>
@@ -997,7 +844,6 @@
 
 </div><!-- /#site-wrap -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/loader.js"></script>
 <script src="js/main.js"></script>
 <script src="js/i18n.js"></script>
