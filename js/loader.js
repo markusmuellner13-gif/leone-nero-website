@@ -64,8 +64,31 @@
 
   /* Kick off playback. Muted + playsinline should satisfy autoplay policies;
      if a browser still blocks it, fall back to a brief poster hold. */
-  var p = video.play();
-  if (p && typeof p.catch === 'function') {
-    p.catch(function () { setTimeout(reveal, 2600); });
+
+  /* iOS/Safari and some Android browsers ignore the HTML `muted` attribute and
+     therefore block autoplay, leaving a tap-to-play poster. Force the muted
+     state via the JS properties before play() so autoplay is actually allowed. */
+  try {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.setAttribute('muted', '');
+    video.playsInline = true;
+  } catch (e) {}
+
+  function startPlayback() {
+    var p = video.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(function () {
+        /* One muted retry — clears transient gesture/policy hiccups — then,
+           if it still won't play, hand off so no one is stuck on the poster. */
+        try { video.muted = true; } catch (e2) {}
+        var p2 = video.play();
+        if (p2 && typeof p2.catch === 'function') {
+          p2.catch(function () { setTimeout(reveal, 2600); });
+        }
+      });
+    }
   }
+
+  startPlayback();
 })();
